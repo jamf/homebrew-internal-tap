@@ -1,5 +1,8 @@
 
 require 'json'
+require 'formula'
+require_relative 'lib/private'
+require_relative 'lib/artifactory'
 
 class CloudToolsAT9 < Formula
     include Language::Python::Virtualenv
@@ -10,7 +13,7 @@ class CloudToolsAT9 < Formula
     version release['version']
     license "MIT"
 
-    url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloud-tools-#{version}.tar.gz"
+    url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloud-tools-#{version}.tar.gz", :using => DownloadFactory
     sha256 release['sha256']
     
     depends_on "python@3.12"
