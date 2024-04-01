@@ -21,6 +21,9 @@ class Hermes < Formula
 
   def install
     bin.install "hermes"
+    bash_completion.install "completions/hermes.bash" => "hermes"
+    zsh_completion.install "completions/hermes.zsh" => "_hermes"
+    fish_completion.install "completions/hermes.fish"
   end
 
   test do
