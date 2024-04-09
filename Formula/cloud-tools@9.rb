@@ -153,8 +153,8 @@ class CloudToolsAT9 < Formula
     end
     
     resource "mysql-connector-python" do
-        url "https://files.pythonhosted.org/packages/ef/ca/26d5d40d31f0d16b26a8c2a4d1944dc0d05d57f838d00e28de9c779c4d97/mysql-connector-python-8.3.0.tar.gz"
-        sha256 "e4ff23aa8036b4c5b6463fa81398bb5a528a29f99955de6ba937f0bba57a2fe3"
+        url "https://files.pythonhosted.org/packages/a7/21/322c3d5c2d04d4e8d0abac44d3de847ce1dc743e08a4606055b94be8c5d4/mysql-connector-python-8.0.23.tar.gz"
+        sha256 "5e84dcc25d4b505118e0c28f07de496a41bc0ab121232a2aba83d0248cd49257"
     end
     
     resource "oauthlib" do
@@ -195,6 +195,11 @@ class CloudToolsAT9 < Formula
     resource "prompt-toolkit" do
         url "https://files.pythonhosted.org/packages/cc/c6/25b6a3d5cd295304de1e32c9edbcf319a52e965b339629d37d42bb7126ca/prompt_toolkit-3.0.43.tar.gz"
         sha256 "3527b7af26106cbc65a040bcc84839a3566ec1b051bb0bfe953631e704b0ff7d"
+    end
+    
+    resource "protobuf" do
+        url "https://files.pythonhosted.org/packages/d2/e5/7e22ca7201a6b1040aae7787d0fe6cd970311da376a86fdafa5182be1d1b/protobuf-5.26.1.tar.gz"
+        sha256 "8ca2a1d97c290ec7b16e4e5dff2e5ae150cc1582f55b5ab300d45cb0dfa90e51"
     end
     
     resource "psutil" do
