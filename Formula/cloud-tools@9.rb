@@ -283,8 +283,8 @@ class CloudToolsAT9 < Formula
     end
     
     resource "stone" do
-        url "https://files.pythonhosted.org/packages/2a/c0/b3dc8b0dda950e0018a892f484387bf81a8ebfe53d6704fe289ae804c23e/stone-3.3.3.tar.gz"
-        sha256 "2ea7d797e5322f0a55def4356f969d92bd8fc51a84706021d11eacb6141cf777"
+        url "https://files.pythonhosted.org/packages/61/4f/b5a9138e86b13e00e2439c62fb4d045d595e0e260454977741f62448c624/stone-3.2.1.tar.gz"
+        sha256 "9bc78b40143b4ef33bf569e515408c2996ffebefbb1a897616ebe8aa6f2d7e75"
     end
     
     resource "tabulate" do
