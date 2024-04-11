@@ -25,6 +25,8 @@ class CloudToolsAT9 < Formula
     depends_on "cmake" => :build
     depends_on "libxml2" => :build
     depends_on "libxslt" => :build
+    depends_on "freetype" => :build
+    depends_on "openjpeg" => :build
 
     
     resource "attrs" do
