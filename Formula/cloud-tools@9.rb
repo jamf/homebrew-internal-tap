@@ -284,6 +284,11 @@ class CloudToolsAT9 < Formula
         sha256 "5683916b4c724f799e600f41dd9e10a9ff19871bf87623cc8f491cb4f5fa0a19"
     end
     
+    resource "setuptools" do
+        url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+        sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
+    end
+    
     resource "simple-salesforce" do
         url "https://files.pythonhosted.org/packages/13/a7/22d3992b8413cb775191a2f7af8b193cdaa9d244bf1613a2affeb26bc9f3/simple-salesforce-1.12.6.tar.gz"
         sha256 "77590606c781905f6b75430562951dd2b062438da7f55fca2b61e4cde31df15b"
