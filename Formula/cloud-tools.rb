@@ -9,11 +9,22 @@ class CloudTools < Formula
     desc "Cloud Operations Tools Homebrew Dev"
     homepage "https://github.com/jamf/cloud-ops-tools"
 
+  bottle do
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.0.29/"
+    sha256 cellar: :any, arm64_sonoma: "6e8018196afb60f0ad7f20402e224ace2252c5625aa0504f9135c45ee8d0923a"
+    sha256 cellar: :any, ventura:      "a8a0121fd8cc92ab04859d1caf4a537c2be1e8996adf6108d583be1827a5927a"
+    sha256 cellar: :any, monterey:     "82388173c5dc5f128f7219305c16a645797258ee0a07a8ed3bdaaf27a4b2a02a"
+  end
+
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
     version release['version']
     license "MIT"
 
-    url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloud-tools-#{version}.tar.gz", :using => DownloadFactory
+    if File.exist?("/tmp/cloud-tools-#{version}.tar.gz")
+        url "file:///tmp/cloud-tools-#{version}.tar.gz"
+    else
+        url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloud-tools-#{version}.tar.gz", :using => DownloadFactory
+    end
     sha256 release['sha256']
     
     depends_on "python@3.12"
