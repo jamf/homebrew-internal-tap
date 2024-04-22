@@ -4,7 +4,7 @@ require 'formula'
 require_relative 'lib/private'
 require_relative 'lib/artifactory'
 
-class CloudToolsAT9 < Formula
+class CloudtoolsAT9 < Formula
     include Language::Python::Virtualenv
     desc "Cloud Operations Tools Homebrew Dev"
     homepage "https://github.com/jamf/cloud-ops-tools"
