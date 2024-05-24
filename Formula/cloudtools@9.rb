@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/fd/cb/8fc502799192784f089f3bffbb35215f49b985a3c0787f75595b97460339/boto3-1.34.95.tar.gz"
-        sha256 "decf52f8d5d8a1b10c9ff2a0e96ee207ed79e33d2e53fdf0880a5cbef70785e0"
+        url "https://files.pythonhosted.org/packages/43/32/4ae9b822c893389bb92052d0b49466cf8347eced132865b8a7822ece6100/boto3-1.34.89.tar.gz"
+        sha256 "e0940e43810fe82f5b77442c751491fcc2768af7e7c3e8c15ea158e1ca9b586c"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/cc/a3/297af5c8f207d2c759135c8603c192a8d48671dd0022028d239d52c69249/botocore-1.34.95.tar.gz"
-        sha256 "6bd76a2eadb42b91fa3528392e981ad5b4dfdee3968fa5b904278acf6cbf15ff"
+        url "https://files.pythonhosted.org/packages/7e/81/6dd26da52d7b3e0c69b0c62f66f537c6e602fc43621831d1f077a8b86864/botocore-1.34.89.tar.gz"
+        sha256 "6624b69bcdf2c5d0568b7bc9cbac13e605f370e7ea06710c61e2e2dc76831141"
     end
     
     resource "certifi" do
@@ -114,11 +114,6 @@ class CloudtoolsAT9 < Formula
         sha256 "d48d3d16d486c78b11c14a1c4a28a2611fbf5a0d0a358b861bfd9482e603c500"
     end
     
-    resource "et-xmlfile" do
-        url "https://files.pythonhosted.org/packages/3d/5d/0413a31d184a20c763ad741cc7852a659bf15094c24840c5bdd1754765cd/et_xmlfile-1.1.0.tar.gz"
-        sha256 "8eb9e2bc2f8c97e37a2dc85a09ecdcdec9d8a396530a6d5a33b30b9a92da0c5c"
-    end
-    
     resource "idna" do
         url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
         sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
@@ -160,8 +155,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "keyring" do
-        url "https://files.pythonhosted.org/packages/b8/09/fdd3a390518e3aebeec0d7aceae7f9152da1fd2484f12f1b3a12a74aa079/keyring-25.2.0.tar.gz"
-        sha256 "7045f367268ce42dba44745050164b431e46f6e92f99ef2937dfadaef368d8cf"
+        url "https://files.pythonhosted.org/packages/18/ec/cc0afdcd7538d4942a6b78f858139120a8c7999e554004080ed312e43886/keyring-25.1.0.tar.gz"
+        sha256 "7230ea690525133f6ad536a9b5def74a4bd52642abe594761028fc044d7c7893"
     end
     
     resource "lxml" do
@@ -197,11 +192,6 @@ class CloudtoolsAT9 < Formula
     resource "oauthlib" do
         url "https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz"
         sha256 "9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918"
-    end
-    
-    resource "openpyxl" do
-        url "https://files.pythonhosted.org/packages/42/e8/af028681d493814ca9c2ff8106fc62a4a32e4e0ae14602c2a98fc7b741c8/openpyxl-3.1.2.tar.gz"
-        sha256 "a6f5977418eff3b2d5500d54d9db50c8277a368436f4e4f8ddb1be3422870184"
     end
     
     resource "packaging" do
