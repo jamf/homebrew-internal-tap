@@ -23,8 +23,8 @@ class CloudtoolsAT9 < Formula
     depends_on "cryptography"
     depends_on "mozjpeg"
     depends_on "cmake" => :build
-    depends_on "libxml2" => :build
-    depends_on "libxslt" => :build
+    depends_on "libxml2"
+    depends_on "libxslt"
     depends_on "freetype" => :build
     depends_on "openjpeg" => :build
 
