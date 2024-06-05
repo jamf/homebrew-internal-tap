@@ -11,11 +11,11 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.0.36",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.0.37",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_sonoma: "1132ac3d2521b4c5f7476732fc12f6f748dc99c8c778ec96e2913aa716a0fa71"
-    sha256 cellar: :any, ventura:      "cf4efdd0e46abf836e85782dffb950f70281bede9e2038e8943915416eee4fbb"
-    sha256 cellar: :any, monterey:     "987a98c1aa524b045b620dc63457ad033813191558ce6587ecc7b1074e1d1756"
+    sha256 cellar: :any, arm64_sonoma: "8fdec74ad5dccc5ae5e612fae8bbeb5c26cdc54c110c99335cb6ab5f074e0281"
+    sha256 cellar: :any, ventura:      "d27426ab3c0fd12feb1fb983ba9e3a0f1571bf9ca6669dfffb380609bfd36eea"
+    sha256 cellar: :any, monterey:     "9a11b76b5cfde6483d48911e730b0411588c36f8fac430cdbd568b9489564d94"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -36,8 +36,8 @@ class Cloudtools < Formula
     depends_on "cryptography"
     depends_on "mozjpeg"
     depends_on "cmake" => :build
-    depends_on "libxml2" => :build
-    depends_on "libxslt" => :build
+    depends_on "libxml2"
+    depends_on "libxslt"
     depends_on "freetype" => :build
     depends_on "openjpeg" => :build
 
