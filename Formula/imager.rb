@@ -11,7 +11,7 @@ class Imager < Formula
   on_macos do
     on_intel do
       url "https://github.com/jamf/imager/releases/download/v0.1.0/imager-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "5638445103b100c44af0643f6e70004173d8e72502ff2504a2971eda6fa87743"
+      sha256 "19e80af99621affea6e7fff545dcba0f5f48c0bf274c2399e61fa568231ce3c9"
 
       def install
         bin.install "imager"
@@ -19,7 +19,7 @@ class Imager < Formula
     end
     on_arm do
       url "https://github.com/jamf/imager/releases/download/v0.1.0/imager-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "5e757ff73f6ce42dd639f711974fc16da37ae68d789ae258eb19de36efac87bc"
+      sha256 "ca380afd57e831b4b9be3d44ea16c053c43176e2a8d01b2cfe675e6bed6f09ce"
 
       def install
         bin.install "imager"
@@ -31,7 +31,7 @@ class Imager < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jamf/imager/releases/download/v0.1.0/imager-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "8b64ab00660eb448e81c18425d7daa42452d59e4cd9514454d6218e76ce6d2ef"
+        sha256 "3b498acbd1c061c6cbaae83bd89d0d7c194e4d67f889daadbfa860b88da930ca"
 
         def install
           bin.install "imager"
@@ -41,7 +41,7 @@ class Imager < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jamf/imager/releases/download/v0.1.0/imager-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "71c739bee0bd3b11bdbc8ebab91778f4f0df0c0f6541f877deaa0a3e09aa5bb4"
+        sha256 "a0a47e2f24a03d8de76eabb96f87f1fa589b52a2120d72852a66d2d648d8e220"
 
         def install
           bin.install "imager"
