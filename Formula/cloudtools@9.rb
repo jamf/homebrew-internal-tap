@@ -17,16 +17,16 @@ class CloudtoolsAT9 < Formula
     sha256 release['sha256']
     
     depends_on "python@3.12"
-    depends_on "pkg-config" => :build
-    depends_on "rust" => :build
+    depends_on "pkg-config"
+    depends_on "rust"
     depends_on "certifi"
     depends_on "cryptography"
     depends_on "mozjpeg"
-    depends_on "cmake" => :build
+    depends_on "cmake"
     depends_on "libxml2"
     depends_on "libxslt"
-    depends_on "freetype" => :build
-    depends_on "openjpeg" => :build
+    depends_on "freetype"
+    depends_on "openjpeg"
 
     
     resource "atlassian-python-api" do
