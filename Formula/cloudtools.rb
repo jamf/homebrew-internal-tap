@@ -11,11 +11,11 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.0.37",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.1.0",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_sonoma: "8fdec74ad5dccc5ae5e612fae8bbeb5c26cdc54c110c99335cb6ab5f074e0281"
-    sha256 cellar: :any, ventura:      "d27426ab3c0fd12feb1fb983ba9e3a0f1571bf9ca6669dfffb380609bfd36eea"
-    sha256 cellar: :any, monterey:     "9a11b76b5cfde6483d48911e730b0411588c36f8fac430cdbd568b9489564d94"
+    sha256 cellar: :any, arm64_sonoma: "39c66b5c1dc9427dd248da6bdaa6268e8ec0e5e63fd0d059df0930bca7bc6f2c"
+    sha256 cellar: :any, ventura:      "5a75e80afba0fec79663b4b691b066021a828ee7a6bc4972e7c993529c6d0025"
+    sha256 cellar: :any, monterey:     "7e788f8163da80325a9d4b1d7ffa90b7bd6a60fe752676122a69bfbf561f3905"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -30,16 +30,16 @@ class Cloudtools < Formula
     sha256 release['sha256']
     
     depends_on "python@3.12"
-    depends_on "pkg-config" => :build
-    depends_on "rust" => :build
+    depends_on "pkg-config"
+    depends_on "rust"
     depends_on "certifi"
     depends_on "cryptography"
     depends_on "mozjpeg"
-    depends_on "cmake" => :build
+    depends_on "cmake"
     depends_on "libxml2"
     depends_on "libxslt"
-    depends_on "freetype" => :build
-    depends_on "openjpeg" => :build
+    depends_on "freetype"
+    depends_on "openjpeg"
 
     
     resource "atlassian-python-api" do
