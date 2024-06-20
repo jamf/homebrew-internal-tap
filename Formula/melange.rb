@@ -6,20 +6,20 @@ require_relative "lib/private"
 class Melange < Formula
   desc "A command-line tool of tools."
   homepage "https://github.com/jamf/melange"
-  version "1.0.3"
+  version "1.1.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/jamf/melange/releases/download/v1.0.3/melange_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "bfcc86e63b2297b13cf2c46e46a271760b74802badc14b1d46bf69151344689a"
+      url "https://github.com/jamf/melange/releases/download/v1.1.0/melange_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "8398242cea4eee4d05496df7dcad6157bfcb339f83a5a9a58e5f5d98c765575b"
 
       def install
         bin.install "melange"
       end
     end
     on_arm do
-      url "https://github.com/jamf/melange/releases/download/v1.0.3/melange_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e8fe0a88be0586a91c4a96fb5dd761e422a4d88c7d1143449e8229f83d7d9f4f"
+      url "https://github.com/jamf/melange/releases/download/v1.1.0/melange_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "d7da96ea140cedec6f1c36753f6fff3dc598fa6972776d3b05710990302fd62e"
 
       def install
         bin.install "melange"
@@ -30,8 +30,8 @@ class Melange < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jamf/melange/releases/download/v1.0.3/melange_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "8ce9da671780358349ba01cae3332c57c76e1c53f73a004364ba9bef514836ae"
+        url "https://github.com/jamf/melange/releases/download/v1.1.0/melange_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "502a8286ca13677896879ab5344ed2ae760fa8dbc479f4a7838b725a979ee021"
 
         def install
           bin.install "melange"
@@ -40,8 +40,8 @@ class Melange < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jamf/melange/releases/download/v1.0.3/melange_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "ef825427b2b6a499ae9b712a6839db3612fae3f35b5449025d280b662b769d5b"
+        url "https://github.com/jamf/melange/releases/download/v1.1.0/melange_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "004c6234ee658a325bb98f89b5db6955f11b1337f975006522490f1ec13288d6"
 
         def install
           bin.install "melange"
