@@ -190,8 +190,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "mysql-connector-python" do
-        url "https://files.pythonhosted.org/packages/d7/c7/d7adba0a87d34c56ce2e8c35f9965df860a087a03e9651039f7916abd483/mysql-connector-python-9.1.0.tar.gz"
-        sha256 "346261a2aeb743a39cf66ba8bde5e45931d313b76ce0946a69a6d1187ec7d279"
+        url "https://files.pythonhosted.org/packages/78/b6/a6ee4697f95e4bc6f402dd12872ed467d5a1b2f4589079e5966ccb10a2fd/mysql-connector-python-8.4.0.tar.gz"
+        sha256 "42542d131d63c78416d410fdc9e84b9acb960d715c2e7b28c57ac9577c6d8165"
     end
     
     resource "numpy" do
