@@ -60,13 +60,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/d2/70/71e0ab52835e63b63a93775b2c8734e4188454b9165e5dee7e55b722bc69/boto3-1.35.43.tar.gz"
-        sha256 "0197f460632804577aa78b2f6daf7b823bffa9d4d67a5cebb179efff0fe9631b"
+        url "https://files.pythonhosted.org/packages/39/61/a545e0d5c331205bcf9e6d24b0bfc95dce91d285787f7d1f967b8228bfce/boto3-1.35.45.tar.gz"
+        sha256 "9f4a081e1940846171b51d903000a04322f1356d53225ce1028fc1760a155a70"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/1f/e2/a65953af6effec4248f8e29b0b5567cfabae686691b8301650b8ac28bfc6/botocore-1.35.43.tar.gz"
-        sha256 "04539b85ade060601a3023cacb538fc17aad8c059a5a2e18fe4bc5d0d91fbd72"
+        url "https://files.pythonhosted.org/packages/6f/c8/7cd28382cd4d45210cbd81ad452add0b8e198c9fc5dc2b1bd27df53e1b4b/botocore-1.35.45.tar.gz"
+        sha256 "9a898bfdd6b0027fee2018711192c15c2716bf6a7096b1168bd8a896df3664a1"
     end
     
     resource "certifi" do
@@ -90,8 +90,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "cryptography" do
-        url "https://files.pythonhosted.org/packages/de/ba/0664727028b37e249e73879348cc46d45c5c1a2a2e81e8166462953c5755/cryptography-43.0.1.tar.gz"
-        sha256 "203e92a75716d8cfb491dc47c79e17d0d9207ccffcbcb35f598fbe463ae3444d"
+        url "https://files.pythonhosted.org/packages/0d/05/07b55d1fa21ac18c3a8c79f764e2514e6f6a9698f1be44994f5adf0d29db/cryptography-43.0.3.tar.gz"
+        sha256 "315b9001266a492a6ff443b61238f956b214dbec9910a081ba5b6646a055a805"
     end
     
     resource "DateTime" do
