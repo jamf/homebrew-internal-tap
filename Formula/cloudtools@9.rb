@@ -60,13 +60,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/12/c1/1dc34b322d2f022d190c34dd4aa7f1a242d73633c25061bf56bd1319fe05/boto3-1.35.53.tar.gz"
-        sha256 "f4124548bb831e13504e805f2fbbfcee06df42fffea0655862c6eb9b95d6d1be"
+        url "https://files.pythonhosted.org/packages/5f/2e/553086c009b4b9975f4af9f0efaac5855f2fb69dae4b94638df477a3ff37/boto3-1.35.50.tar.gz"
+        sha256 "4f15d1ccb481d66f6925b8c91c970ce41b956b6ecf7c479f23e2159531b37eec"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/48/c9/d5a1f5ad4024eda0d5d1b4103d28085c13cf42ca377fc141f7df4ad1cec9/botocore-1.35.53.tar.gz"
-        sha256 "e610ae076ad1eaed5680d3990493659bbabdffd67b15c61d8373a23e4bc41062"
+        url "https://files.pythonhosted.org/packages/ef/16/04bc1b17f085a435e28b101e8a62cfe9588d6eeeab5ffa39c07d134da512/botocore-1.35.50.tar.gz"
+        sha256 "136ecef8d5a1088f1ba485c0bbfca40abd42b9f9fe9e11d8cde4e53b4c05b188"
     end
     
     resource "certifi" do
@@ -152,11 +152,6 @@ class CloudtoolsAT9 < Formula
     resource "jaraco.functools" do
         url "https://files.pythonhosted.org/packages/ab/23/9894b3df5d0a6eb44611c36aec777823fc2e07740dabbd0b810e19594013/jaraco_functools-4.1.0.tar.gz"
         sha256 "70f7e0e2ae076498e212562325e805204fc092d7b4c17e0e86c959e249701a9d"
-    end
-    
-    resource "jeepney" do
-        url "https://files.pythonhosted.org/packages/d6/f4/154cf374c2daf2020e05c3c6a03c91348d59b23c5366e968feb198306fdf/jeepney-0.8.0.tar.gz"
-        sha256 "5efe48d255973902f6badc3ce55e2aa6c5c3b3bc642059ef3a91247bcfcc5806"
     end
     
     resource "jira" do
@@ -255,8 +250,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "prettytable" do
-        url "https://files.pythonhosted.org/packages/3b/8a/de4dc1a6098621781c266b3fb3964009af1e9023527180cb8a3b0dd9d09e/prettytable-3.12.0.tar.gz"
-        sha256 "f04b3e1ba35747ac86e96ec33e3bb9748ce08e254dc2a1c6253945901beec804"
+        url "https://files.pythonhosted.org/packages/28/57/0a642bec16d5736b9baaac7e830bedccd10341dc2858075c34d5aec5c8b6/prettytable-3.11.0.tar.gz"
+        sha256 "7e23ca1e68bbfd06ba8de98bf553bf3493264c96d5e8a615c0471025deeba722"
     end
     
     resource "prompt_toolkit" do
@@ -265,8 +260,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "protobuf" do
-        url "https://files.pythonhosted.org/packages/71/a5/d61e4263e62e6db1990c120d682870e5c50a30fb6b26119a214c7a014847/protobuf-5.27.2.tar.gz"
-        sha256 "f3ecdef226b9af856075f28227ff2c90ce3a594d092c39bee5513573f25e2714"
+        url "https://files.pythonhosted.org/packages/74/6e/e69eb906fddcb38f8530a12f4b410699972ab7ced4e21524ece9d546ac27/protobuf-5.28.3.tar.gz"
+        sha256 "64badbc49180a5e401f373f9ce7ab1d18b63f7dd4a9cdc43c92b9f0b481cef7b"
     end
     
     resource "psutil" do
@@ -344,11 +339,6 @@ class CloudtoolsAT9 < Formula
         sha256 "4f50ed74ab84d474ce614475e0b8d5047ff080810aac5d01ea25231cfc944b0c"
     end
     
-    resource "SecretStorage" do
-        url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
-        sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
-    end
-    
     resource "setuptools" do
         url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
         sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
@@ -365,8 +355,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "slack_sdk" do
-        url "https://files.pythonhosted.org/packages/e6/80/1deaf0d20bdfd04613f67f0b8603c374dbde29199433bf070f29dc8f44aa/slack_sdk-3.33.3.tar.gz"
-        sha256 "4cc44c9ffe4bb28a01fbe3264c2f466c783b893a4eca62026ab845ec7c176ff1"
+        url "https://files.pythonhosted.org/packages/69/45/378db6bd5ef952b25c0caed9c9b9be733dba1f702099182deddd60e85be7/slack_sdk-3.33.2.tar.gz"
+        sha256 "34c51cfb9c254553219a0bba7a741c913f5d4d372d6278c3e7e10fe7bb667724"
     end
     
     resource "soupsieve" do
@@ -375,8 +365,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "splunk-sdk" do
-        url "https://files.pythonhosted.org/packages/2c/89/31974e00319b750a5a126717d286e8addb683554454fed1ae6c86977cbcf/splunk-sdk-2.1.0.tar.gz"
-        sha256 "63f9a259a7c84d0c3b0b32cae652365b03f0f926acdb894b51456005df74ae21"
+        url "https://files.pythonhosted.org/packages/7a/3c/7c2f19d1a8fc25f83291586d1129bad5880ed2a7a9e3df661e5436484950/splunk-sdk-2.0.2.tar.gz"
+        sha256 "d5ccf6e1b96e493b1399e071ef10f8337e0a39ac2b2acc73fdd375b87b4104cb"
     end
     
     resource "sqlparse" do
