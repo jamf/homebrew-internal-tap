@@ -16,7 +16,7 @@ class CloudtoolsAT9 < Formula
     url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloudtools-#{version}.tar.gz", :using => DownloadFactory
     sha256 release['sha256']
     
-    depends_on "python@3.13"
+    depends_on "python@3.12"
     depends_on "pkg-config"
     depends_on "rust"
     depends_on "certifi"
@@ -421,7 +421,7 @@ class CloudtoolsAT9 < Formula
     
 
     def python3
-        "python3.13"
+        "python3.12"
     end
   
     def install
