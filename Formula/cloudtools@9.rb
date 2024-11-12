@@ -149,6 +149,11 @@ class CloudtoolsAT9 < Formula
         sha256 "70f7e0e2ae076498e212562325e805204fc092d7b4c17e0e86c959e249701a9d"
     end
     
+    resource "jeepney" do
+        url "https://files.pythonhosted.org/packages/d6/f4/154cf374c2daf2020e05c3c6a03c91348d59b23c5366e968feb198306fdf/jeepney-0.8.0.tar.gz"
+        sha256 "5efe48d255973902f6badc3ce55e2aa6c5c3b3bc642059ef3a91247bcfcc5806"
+    end
+    
     resource "jira" do
         url "https://files.pythonhosted.org/packages/78/b4/557e4c80c0ea12164ffeec0e29372c085bfb263faad53cef5e1455523bec/jira-3.8.0.tar.gz"
         sha256 "63719c529a570aaa01c3373dbb5a104dab70381c5be447f6c27f997302fa335a"
@@ -182,11 +187,6 @@ class CloudtoolsAT9 < Formula
     resource "more-itertools" do
         url "https://files.pythonhosted.org/packages/51/78/65922308c4248e0eb08ebcbe67c95d48615cc6f27854b6f2e57143e9178f/more-itertools-10.5.0.tar.gz"
         sha256 "5482bfef7849c25dc3c6dd53a6173ae4795da2a41a80faea6700d9f5846c5da6"
-    end
-    
-    resource "mysql-connector-python" do
-        url "https://files.pythonhosted.org/packages/a7/21/322c3d5c2d04d4e8d0abac44d3de847ce1dc743e08a4606055b94be8c5d4/mysql-connector-python-8.0.23.tar.gz"
-        sha256 "5e84dcc25d4b505118e0c28f07de496a41bc0ab121232a2aba83d0248cd49257"
     end
     
     resource "oauthlib" do
@@ -237,11 +237,6 @@ class CloudtoolsAT9 < Formula
     resource "prompt_toolkit" do
         url "https://files.pythonhosted.org/packages/2d/4f/feb5e137aff82f7c7f3248267b97451da3644f6cdc218edfe549fb354127/prompt_toolkit-3.0.48.tar.gz"
         sha256 "d6623ab0477a80df74e646bdbc93621143f5caf104206aa29294d53de1a03d90"
-    end
-    
-    resource "protobuf" do
-        url "https://files.pythonhosted.org/packages/74/6e/e69eb906fddcb38f8530a12f4b410699972ab7ced4e21524ece9d546ac27/protobuf-5.28.3.tar.gz"
-        sha256 "64badbc49180a5e401f373f9ce7ab1d18b63f7dd4a9cdc43c92b9f0b481cef7b"
     end
     
     resource "psutil" do
@@ -312,6 +307,11 @@ class CloudtoolsAT9 < Formula
     resource "s3transfer" do
         url "https://files.pythonhosted.org/packages/a0/a8/e0a98fd7bd874914f0608ef7c90ffde17e116aefad765021de0f012690a2/s3transfer-0.10.3.tar.gz"
         sha256 "4f50ed74ab84d474ce614475e0b8d5047ff080810aac5d01ea25231cfc944b0c"
+    end
+    
+    resource "SecretStorage" do
+        url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
+        sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
     end
     
     resource "setuptools" do
