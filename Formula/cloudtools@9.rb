@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/69/68/632769113ba3679fe63601d871bce1b1b4cdebac04c05bb071c3187032b5/boto3-1.35.58.tar.gz"
-        sha256 "1ee139e63f1545ee0192914cfe422b68360b8c344a94e4612ac657dd7ece93de"
+        url "https://files.pythonhosted.org/packages/af/ca/09fb332e8bab219df4832337978d7c8227571b86fdcfb28355f591cf544f/boto3-1.35.59.tar.gz"
+        sha256 "81f4d8d6eff3e26b82cabd42eda816cfac9482821fdef353f18d2ba2f6e75f2d"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/cd/d8/49a69f2aa71efcd9a278370171185160be3ac35f5e09ed303c08612c6336/botocore-1.35.58.tar.gz"
-        sha256 "8303309c7b59ddf04b11d79813530809d6b10b411ac9f93916d2032c283d6881"
+        url "https://files.pythonhosted.org/packages/ff/19/f4609e3f9ae2c166fd1350e9128b647f9a1d3ecd2e01db08cd0227c2b9e0/botocore-1.35.59.tar.gz"
+        sha256 "de0ce655fedfc02c87869dfaa3b622488a17ff37da316ef8106cbe1573b83c98"
     end
     
     resource "certifi" do
