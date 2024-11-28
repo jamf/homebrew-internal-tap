@@ -30,8 +30,8 @@ class CloudtoolsAT9 < Formula
 
     
     resource "art" do
-        url "https://files.pythonhosted.org/packages/f5/49/9d40caffc16ab712bef515afd19dc069d36c47c86ef54e22e73068cfcfea/art-6.3.tar.gz"
-        sha256 "0fbc28864583ba54bcdc17ec24ef6c51a1fc81729a5c68d9b38658bc0afbc598"
+        url "https://files.pythonhosted.org/packages/ee/6e/dc8dc5c2d99a171cb97a02b817c2dd8db3b33c53bdb29852ba2802676fd1/art-6.4.tar.gz"
+        sha256 "417fea674bff8cea7ed058291ad1b81a6032dfce5152f28e629fa4a798a2c14c"
     end
     
     resource "atlassian-python-api" do
@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/b7/72/f80a131ac5e069b12975c1054243713c46617cc769dc78348e1d59a3f945/boto3-1.35.69.tar.gz"
-        sha256 "40db86c7732a310b282f595251995ecafcbd62009a57e47a22683862e570cc7a"
+        url "https://files.pythonhosted.org/packages/87/6d/8e89a60e756c5da4ef56afa738aabed4aa16945676e98b23ede17dffb007/boto3-1.35.71.tar.gz"
+        sha256 "3ed7172b3d4fceb6218bb0ec3668c4d40c03690939c2fca4f22bb875d741a07f"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/55/75/aaaa22f737b7a5251f2ab24f5860b1bfc55050a77b91524474bcaadb3070/botocore-1.35.69.tar.gz"
-        sha256 "f9f23dd76fb247d9b0e8d411d2995e6f847fc451c026f1e58e300f815b0b36eb"
+        url "https://files.pythonhosted.org/packages/77/7b/c3f9babe738d5efeb96bd5b250bafcd733c2fd5d8650d8986daa86ee45a1/botocore-1.35.71.tar.gz"
+        sha256 "f9fa058e0393660c3fe53c1e044751beb64b586def0bd2212448a7c328b0cbba"
     end
     
     resource "certifi" do
@@ -85,8 +85,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "cryptography" do
-        url "https://files.pythonhosted.org/packages/0d/05/07b55d1fa21ac18c3a8c79f764e2514e6f6a9698f1be44994f5adf0d29db/cryptography-43.0.3.tar.gz"
-        sha256 "315b9001266a492a6ff443b61238f956b214dbec9910a081ba5b6646a055a805"
+        url "https://files.pythonhosted.org/packages/91/4c/45dfa6829acffa344e3967d6006ee4ae8be57af746ae2eba1c431949b32c/cryptography-44.0.0.tar.gz"
+        sha256 "cd4e834f340b4293430701e772ec543b0fbe6c2dea510a5286fe0acabe153a02"
     end
     
     resource "DateTime" do
@@ -255,8 +255,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "PyJWT" do
-        url "https://files.pythonhosted.org/packages/b5/05/324952ded002de746f87b21066b9373080bb5058f64cf01c4d62784b8186/pyjwt-2.10.0.tar.gz"
-        sha256 "7628a7eb7938959ac1b26e819a1df0fd3259505627b575e4bad6d08f76db695c"
+        url "https://files.pythonhosted.org/packages/e7/46/bd74733ff231675599650d3e47f361794b22ef3e3770998dda30d3b63726/pyjwt-2.10.1.tar.gz"
+        sha256 "3cc5772eb20009233caf06e9d8a0577824723b44e6648ee0a2aedb6cf9381953"
     end
     
     resource "pyperclip" do
