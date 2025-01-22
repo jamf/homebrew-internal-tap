@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/3a/e9/c0b2fa75efc4007ea1af21bc2fcbedf6e545c517fb90904d7f59850e02bf/boto3-1.36.2.tar.gz"
-        sha256 "fde1c29996b77274a60b7bc9f741525afa6267bb1716eb644a764fb7c124a0d2"
+        url "https://files.pythonhosted.org/packages/07/12/b9ad4c3dd6e6044243d08bae076795e41357651683f4fad99d5828c4291c/boto3-1.36.3.tar.gz"
+        sha256 "53a5307f6a3526ee2f8590e3c45efa504a3ea4532c1bfe4926c0c19bf188d141"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/c6/93/353b70cea6447e37789fc2d6f761fc12ae36fb4adb6f558055de8cdf655f/botocore-1.36.2.tar.gz"
-        sha256 "a1fe6610983f0214b0c7655fe6990b6a731746baf305b182976fc7b568fc3cb0"
+        url "https://files.pythonhosted.org/packages/3a/61/69eb06a803c83e0da733b60b2bc65880c18ef2dee19ee10cf8732794a3c1/botocore-1.36.3.tar.gz"
+        sha256 "775b835e979da5c96548ed1a0b798101a145aec3cd46541d62e27dda5a94d7f8"
     end
     
     resource "certifi" do
@@ -235,8 +235,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "prompt_toolkit" do
-        url "https://files.pythonhosted.org/packages/2d/4f/feb5e137aff82f7c7f3248267b97451da3644f6cdc218edfe549fb354127/prompt_toolkit-3.0.48.tar.gz"
-        sha256 "d6623ab0477a80df74e646bdbc93621143f5caf104206aa29294d53de1a03d90"
+        url "https://files.pythonhosted.org/packages/a1/e1/bd15cb8ffdcfeeb2bdc215de3c3cffca11408d829e4b8416dcfe71ba8854/prompt_toolkit-3.0.50.tar.gz"
+        sha256 "544748f3860a2623ca5cd6d2795e7a14f3d0e1c3c9728359013f79877fc89bab"
     end
     
     resource "psutil" do
@@ -385,8 +385,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "tzdata" do
-        url "https://files.pythonhosted.org/packages/e1/34/943888654477a574a86a98e9896bae89c7aa15078ec29f490fef2f1e5384/tzdata-2024.2.tar.gz"
-        sha256 "7d85cc416e9382e69095b7bdf4afd9e3880418a2413feec7069d533d6b4e31cc"
+        url "https://files.pythonhosted.org/packages/43/0f/fa4723f22942480be4ca9527bbde8d43f6c3f2fe8412f00e7f5f6746bc8b/tzdata-2025.1.tar.gz"
+        sha256 "24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694"
     end
     
     resource "urllib3" do
