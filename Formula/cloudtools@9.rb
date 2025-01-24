@@ -35,8 +35,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "atlassian-python-api" do
-        url "https://files.pythonhosted.org/packages/7b/7e/f5d7b101a16e2293e762315c92100002a58f58de48108c4ba7d6ddd51946/atlassian_python_api-3.41.18.tar.gz"
-        sha256 "f38fa9c9c39fc072fa2124d2a8c9db3b684cb88797f428ddac19ae3c94d70bb3"
+        url "https://files.pythonhosted.org/packages/f8/10/e1ccfe7a9cc091056a4eadc9a55849505b1249312b9cd448925ed489450f/atlassian_python_api-3.41.19.tar.gz"
+        sha256 "694a81ed082a4ca8f4fa7a197d60ee2b3f34a45664a74bdfeb835c4d7ff0e305"
     end
     
     resource "attrs" do
@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/07/12/b9ad4c3dd6e6044243d08bae076795e41357651683f4fad99d5828c4291c/boto3-1.36.3.tar.gz"
-        sha256 "53a5307f6a3526ee2f8590e3c45efa504a3ea4532c1bfe4926c0c19bf188d141"
+        url "https://files.pythonhosted.org/packages/f0/ad/e7265bc68d7713b8b1bbd459a534b9c19076464e703a2fc53e9c0f68fdb2/boto3-1.36.5.tar.gz"
+        sha256 "58a6b7c3d5145b3ac04d4b6caa76223b8ef88004b4237444e553041e29581a11"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/3a/61/69eb06a803c83e0da733b60b2bc65880c18ef2dee19ee10cf8732794a3c1/botocore-1.36.3.tar.gz"
-        sha256 "775b835e979da5c96548ed1a0b798101a145aec3cd46541d62e27dda5a94d7f8"
+        url "https://files.pythonhosted.org/packages/2d/e9/57640ea802ea3647896ebde2469e2fc8823a48a20bff6ba2bc9c915dcfac/botocore-1.36.5.tar.gz"
+        sha256 "234ed3d29a8954c37a551c933453bf14c6ae44a69a4f273ffef377a2612ca6a6"
     end
     
     resource "certifi" do
@@ -305,8 +305,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "s3transfer" do
-        url "https://files.pythonhosted.org/packages/1a/aa/fdd958c626b00e3f046d4004363e7f1a2aba4354f78d65ceb3b217fa5eb8/s3transfer-0.11.1.tar.gz"
-        sha256 "3f25c900a367c8b7f7d8f9c34edc87e300bde424f779dc9f0a8ae4f9df9264f6"
+        url "https://files.pythonhosted.org/packages/62/45/2323b5928f86fd29f9afdcef4659f68fa73eaa5356912b774227f5cf46b5/s3transfer-0.11.2.tar.gz"
+        sha256 "3b39185cb72f5acc77db1a58b6e25b977f28d20496b6e58d6813d75f464d632f"
     end
     
     resource "SecretStorage" do
