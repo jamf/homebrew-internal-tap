@@ -40,8 +40,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "attrs" do
-        url "https://files.pythonhosted.org/packages/48/c8/6260f8ccc11f0917360fc0da435c5c9c7504e3db174d5a12a1494887b045/attrs-24.3.0.tar.gz"
-        sha256 "8f5c07333d543103541ba7be0e2ce16eeee8130cb0b3f9238ab904ce1e85baff"
+        url "https://files.pythonhosted.org/packages/49/7c/fdf464bcc51d23881d110abd74b512a42b3d5d376a55a831b44c603ae17f/attrs-25.1.0.tar.gz"
+        sha256 "1c97078a80c814273a76b2a298a932eb681c87415c11dee0a6921de7f1b02c3e"
     end
     
     resource "beautifulsoup4" do
@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/f0/ad/e7265bc68d7713b8b1bbd459a534b9c19076464e703a2fc53e9c0f68fdb2/boto3-1.36.5.tar.gz"
-        sha256 "58a6b7c3d5145b3ac04d4b6caa76223b8ef88004b4237444e553041e29581a11"
+        url "https://files.pythonhosted.org/packages/ec/31/f6189fcb81156cd2e7f7616e4c95958a47e53c12253c5e86a9dcc1a529c1/boto3-1.36.6.tar.gz"
+        sha256 "b36feae061dc0793cf311468956a0a9e99215ce38bc99a1a4e55a5b105f16297"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/2d/e9/57640ea802ea3647896ebde2469e2fc8823a48a20bff6ba2bc9c915dcfac/botocore-1.36.5.tar.gz"
-        sha256 "234ed3d29a8954c37a551c933453bf14c6ae44a69a4f273ffef377a2612ca6a6"
+        url "https://files.pythonhosted.org/packages/b0/b6/bd1a28becf386a70ca41aa6b76b0d65d03aed81d39fac662d1f97754ffca/botocore-1.36.6.tar.gz"
+        sha256 "4864c53d638da191a34daf3ede3ff1371a3719d952cc0c6bd24ce2836a38dd77"
     end
     
     resource "certifi" do
@@ -100,8 +100,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "Deprecated" do
-        url "https://files.pythonhosted.org/packages/2e/a3/53e7d78a6850ffdd394d7048a31a6f14e44900adedf190f9a165f6b69439/deprecated-1.2.15.tar.gz"
-        sha256 "683e561a90de76239796e6b6feac66b99030d2dd3fcf61ef996330f14bbb9b0d"
+        url "https://files.pythonhosted.org/packages/2f/20/caa25c084ebad492360bf28ba5cb74f27b50fc6f3df965fd0add2b5b5993/deprecated-1.2.17.tar.gz"
+        sha256 "0114a10f0bbb750b90b2c2296c90cf7e9eaeb0abb5cf06c80de2c60138de0a82"
     end
     
     resource "deprecation" do
@@ -230,8 +230,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "prettytable" do
-        url "https://files.pythonhosted.org/packages/3b/8a/de4dc1a6098621781c266b3fb3964009af1e9023527180cb8a3b0dd9d09e/prettytable-3.12.0.tar.gz"
-        sha256 "f04b3e1ba35747ac86e96ec33e3bb9748ce08e254dc2a1c6253945901beec804"
+        url "https://files.pythonhosted.org/packages/c5/eb/ae616127eae724ff3bef04823a3eeb2633c85b769b6232af4fcc98c7c9d7/prettytable-3.13.0.tar.gz"
+        sha256 "30e1a097a7acb075b5c488ffe01195349b37009c2d43ca7fa8b5f6a61daace5b"
     end
     
     resource "prompt_toolkit" do
