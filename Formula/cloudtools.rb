@@ -11,9 +11,9 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.3.6",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.4.0",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_sonoma: "f531423cf4ff5672812feb73b5dda355567266ca6fa93d178233969ea4459574"
+    sha256 cellar: :any, arm64_sonoma: "321bd4b27222ebe69e99c5a11ef773d46875ec303d82572b84a63e514d161c6f"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -46,13 +46,13 @@ class Cloudtools < Formula
     end
     
     resource "atlassian-python-api" do
-        url "https://files.pythonhosted.org/packages/7b/7e/f5d7b101a16e2293e762315c92100002a58f58de48108c4ba7d6ddd51946/atlassian_python_api-3.41.18.tar.gz"
-        sha256 "f38fa9c9c39fc072fa2124d2a8c9db3b684cb88797f428ddac19ae3c94d70bb3"
+        url "https://files.pythonhosted.org/packages/f8/10/e1ccfe7a9cc091056a4eadc9a55849505b1249312b9cd448925ed489450f/atlassian_python_api-3.41.19.tar.gz"
+        sha256 "694a81ed082a4ca8f4fa7a197d60ee2b3f34a45664a74bdfeb835c4d7ff0e305"
     end
     
     resource "attrs" do
-        url "https://files.pythonhosted.org/packages/48/c8/6260f8ccc11f0917360fc0da435c5c9c7504e3db174d5a12a1494887b045/attrs-24.3.0.tar.gz"
-        sha256 "8f5c07333d543103541ba7be0e2ce16eeee8130cb0b3f9238ab904ce1e85baff"
+        url "https://files.pythonhosted.org/packages/49/7c/fdf464bcc51d23881d110abd74b512a42b3d5d376a55a831b44c603ae17f/attrs-25.1.0.tar.gz"
+        sha256 "1c97078a80c814273a76b2a298a932eb681c87415c11dee0a6921de7f1b02c3e"
     end
     
     resource "beautifulsoup4" do
@@ -66,13 +66,13 @@ class Cloudtools < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/64/c2/cae7165a7c89a507d318ed4819d9dc707c2e36c1f988e815ecfe764a4e33/boto3-1.36.4.tar.gz"
-        sha256 "eeceeb74ef8b65634d358c27aa074917f4449dc828f79301f1075232618eb502"
+        url "https://files.pythonhosted.org/packages/6b/fa/b688fdda8aff3743745afe04ae6df70b9480f00d0b1b051e06b0f7389088/boto3-1.36.8.tar.gz"
+        sha256 "ac47215d320b0c2534340db58d6d5284cb1860b7bff172b4dd6eee2dee1d5779"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/a9/a7/d85cad20f43d753105ba9ecbed7ff1047f5a952c80e5023261e21ff1afe4/botocore-1.36.4.tar.gz"
-        sha256 "ef54f5e3316040b6ff775941e6ed052c3230dda0079d17d9f9e3c757375f2027"
+        url "https://files.pythonhosted.org/packages/23/a6/7b526b42ba24e6ef482cdd98d3caca31e96ed0595b8b994b09e807a10d44/botocore-1.36.8.tar.gz"
+        sha256 "81c88e5566cf018e1411a68304dc1fb9e4156ca2b50a3a0f0befc274299e67fa"
     end
     
     resource "certifi" do
@@ -111,8 +111,8 @@ class Cloudtools < Formula
     end
     
     resource "Deprecated" do
-        url "https://files.pythonhosted.org/packages/2e/a3/53e7d78a6850ffdd394d7048a31a6f14e44900adedf190f9a165f6b69439/deprecated-1.2.15.tar.gz"
-        sha256 "683e561a90de76239796e6b6feac66b99030d2dd3fcf61ef996330f14bbb9b0d"
+        url "https://files.pythonhosted.org/packages/98/97/06afe62762c9a8a86af0cfb7bfdab22a43ad17138b07af5b1a58442690a2/deprecated-1.2.18.tar.gz"
+        sha256 "422b6f6d859da6f2ef57857761bfb392480502a64c3028ca9bbe86085d72115d"
     end
     
     resource "deprecation" do
@@ -241,8 +241,8 @@ class Cloudtools < Formula
     end
     
     resource "prettytable" do
-        url "https://files.pythonhosted.org/packages/3b/8a/de4dc1a6098621781c266b3fb3964009af1e9023527180cb8a3b0dd9d09e/prettytable-3.12.0.tar.gz"
-        sha256 "f04b3e1ba35747ac86e96ec33e3bb9748ce08e254dc2a1c6253945901beec804"
+        url "https://files.pythonhosted.org/packages/c5/eb/ae616127eae724ff3bef04823a3eeb2633c85b769b6232af4fcc98c7c9d7/prettytable-3.13.0.tar.gz"
+        sha256 "30e1a097a7acb075b5c488ffe01195349b37009c2d43ca7fa8b5f6a61daace5b"
     end
     
     resource "prompt_toolkit" do
@@ -316,8 +316,8 @@ class Cloudtools < Formula
     end
     
     resource "s3transfer" do
-        url "https://files.pythonhosted.org/packages/1a/aa/fdd958c626b00e3f046d4004363e7f1a2aba4354f78d65ceb3b217fa5eb8/s3transfer-0.11.1.tar.gz"
-        sha256 "3f25c900a367c8b7f7d8f9c34edc87e300bde424f779dc9f0a8ae4f9df9264f6"
+        url "https://files.pythonhosted.org/packages/62/45/2323b5928f86fd29f9afdcef4659f68fa73eaa5356912b774227f5cf46b5/s3transfer-0.11.2.tar.gz"
+        sha256 "3b39185cb72f5acc77db1a58b6e25b977f28d20496b6e58d6813d75f464d632f"
     end
     
     resource "SecretStorage" do
@@ -439,6 +439,12 @@ class Cloudtools < Formula
         venv = virtualenv_create(libexec, python3)
         venv.pip_install resources
         venv.pip_install_and_link buildpath
+
+        #install bash script
+        bin.install "src/scripts/update_jamf_os_aliases"
+
+        #install other executables
+        #bin.install "path/to/executable"
     end
   
     test do
