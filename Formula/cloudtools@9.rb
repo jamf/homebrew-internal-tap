@@ -45,8 +45,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "beautifulsoup4" do
-        url "https://files.pythonhosted.org/packages/58/f3/d90227cc52f7b8fcd0f2af804f56e55edf8dd07036b681a2809e3245318b/beautifulsoup4-4.13.1.tar.gz"
-        sha256 "741c8b6903a1e4ae8ba32b9c9ae7510dab7a197fdbadcf9fcdeb0891ef5ec66a"
+        url "https://files.pythonhosted.org/packages/f0/3c/adaf39ce1fb4afdd21b611e3d530b183bb7759c9b673d60db0e347fd4439/beautifulsoup4-4.13.3.tar.gz"
+        sha256 "1bd32405dacc920b42b83ba01644747ed77456a65760e285fbc47633ceddaf8b"
     end
     
     resource "biplist" do
@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/04/2b/7365aab02b6768a9694ff43e0e5f1f83f205fc7fe253a410cda990425048/boto3-1.36.12.tar.gz"
-        sha256 "287d84f49bba3255a17b374578127d42b6251e72f55914a62e0ad9ca78c0954b"
+        url "https://files.pythonhosted.org/packages/b1/de/3c35089f97f6068beb852b51b9eede70e8f7e39a6c8ddff68f3bcabafe3e/boto3-1.36.13.tar.gz"
+        sha256 "c8031aa1c4a7c331081b2d86c49a362654b86e0b89d0a41fa166a68b226f4aba"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/fe/54/cc9a665f92534aa105a49dd867f18d4eff4687835994a70a32a103fa11ae/botocore-1.36.12.tar.gz"
-        sha256 "86ed88beb4f244c96529435c868d3940073c2774116f0023fb7691f6e7053bd9"
+        url "https://files.pythonhosted.org/packages/7e/0b/87dcaaa03a7b5bf3e06abfeccb2af328a436a97fd7b6015f174f1350a284/botocore-1.36.13.tar.gz"
+        sha256 "50a3ff292f8dfdde21074b5c916afe847b01e074ab16d9c9fe71b34960c77134"
     end
     
     resource "certifi" do
