@@ -11,9 +11,9 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.4.1",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.4.2",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_sonoma: "e9b148868372af68c610a6065f625fcc21c49c2bd14124e62127b96bff7249aa"
+    sha256 cellar: :any, arm64_sonoma: "f482580894dbd5185c14981ce61b514aa6abcb2fc0943c03da73abd31323e688"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -56,8 +56,8 @@ class Cloudtools < Formula
     end
     
     resource "beautifulsoup4" do
-        url "https://files.pythonhosted.org/packages/b3/ca/824b1195773ce6166d388573fc106ce56d4a805bd7427b624e063596ec58/beautifulsoup4-4.12.3.tar.gz"
-        sha256 "74e3d1928edc070d21748185c46e3fb33490f22f52a3addee9aee0f4f7781051"
+        url "https://files.pythonhosted.org/packages/f0/3c/adaf39ce1fb4afdd21b611e3d530b183bb7759c9b673d60db0e347fd4439/beautifulsoup4-4.13.3.tar.gz"
+        sha256 "1bd32405dacc920b42b83ba01644747ed77456a65760e285fbc47633ceddaf8b"
     end
     
     resource "biplist" do
@@ -66,18 +66,18 @@ class Cloudtools < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/6b/fa/b688fdda8aff3743745afe04ae6df70b9480f00d0b1b051e06b0f7389088/boto3-1.36.8.tar.gz"
-        sha256 "ac47215d320b0c2534340db58d6d5284cb1860b7bff172b4dd6eee2dee1d5779"
+        url "https://files.pythonhosted.org/packages/8c/bd/46dea249b6fab89f30a341683844d7b176ce0c439b90c59818bd6407b505/boto3-1.36.16.tar.gz"
+        sha256 "0cf92ca0538ab115447e1c58050d43e1273e88c58ddfea2b6f133fdc508b400a"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/23/a6/7b526b42ba24e6ef482cdd98d3caca31e96ed0595b8b994b09e807a10d44/botocore-1.36.8.tar.gz"
-        sha256 "81c88e5566cf018e1411a68304dc1fb9e4156ca2b50a3a0f0befc274299e67fa"
+        url "https://files.pythonhosted.org/packages/d2/98/a32b62a6dabc91611343e8fcf6634c97d3711c5d4be090f4388efff35e2a/botocore-1.36.16.tar.gz"
+        sha256 "10c6aa386ba1a9a0faef6bb5dbfc58fc2563a3c6b95352e86a583cd5f14b11f3"
     end
     
     resource "certifi" do
-        url "https://files.pythonhosted.org/packages/0f/bd/1d41ee578ce09523c81a15426705dd20969f5abf006d1afe8aeff0dd776a/certifi-2024.12.14.tar.gz"
-        sha256 "b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db"
+        url "https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz"
+        sha256 "3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651"
     end
     
     resource "cffi" do
@@ -241,8 +241,8 @@ class Cloudtools < Formula
     end
     
     resource "prettytable" do
-        url "https://files.pythonhosted.org/packages/c5/eb/ae616127eae724ff3bef04823a3eeb2633c85b769b6232af4fcc98c7c9d7/prettytable-3.13.0.tar.gz"
-        sha256 "30e1a097a7acb075b5c488ffe01195349b37009c2d43ca7fa8b5f6a61daace5b"
+        url "https://files.pythonhosted.org/packages/02/7b/18bb59d7c3a4ac9ac7d986cfe49dd3c2e5f5ae3e65ca3db8816764e0c1df/prettytable-3.14.0.tar.gz"
+        sha256 "b804b8d51db23959b96b329094debdbbdf10c8c3aa75958c5988cfd7f78501dd"
     end
     
     resource "prompt_toolkit" do
@@ -281,8 +281,8 @@ class Cloudtools < Formula
     end
     
     resource "pytz" do
-        url "https://files.pythonhosted.org/packages/3a/31/3c70bf7603cc2dca0f19bdc53b4537a797747a58875b552c8c413d963a3f/pytz-2024.2.tar.gz"
-        sha256 "2aa355083c50a0f93fa581709deac0c9ad65cca8a9e9beac660adcbd493c798a"
+        url "https://files.pythonhosted.org/packages/5f/57/df1c9157c8d5a05117e455d66fd7cf6dbc46974f832b1058ed4856785d8a/pytz-2025.1.tar.gz"
+        sha256 "c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e"
     end
     
     resource "requests" do
