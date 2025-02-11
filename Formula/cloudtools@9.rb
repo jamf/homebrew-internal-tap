@@ -55,13 +55,13 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/8c/bd/46dea249b6fab89f30a341683844d7b176ce0c439b90c59818bd6407b505/boto3-1.36.16.tar.gz"
-        sha256 "0cf92ca0538ab115447e1c58050d43e1273e88c58ddfea2b6f133fdc508b400a"
+        url "https://files.pythonhosted.org/packages/4f/cc/77183440b739a202e933394feb39a177d8958a74e3103e20721260f41435/boto3-1.36.18.tar.gz"
+        sha256 "be8e32c34d7b103a64fafdd277fa1ec136733b4bbfc11dcfa597efa36a820b37"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/d2/98/a32b62a6dabc91611343e8fcf6634c97d3711c5d4be090f4388efff35e2a/botocore-1.36.16.tar.gz"
-        sha256 "10c6aa386ba1a9a0faef6bb5dbfc58fc2563a3c6b95352e86a583cd5f14b11f3"
+        url "https://files.pythonhosted.org/packages/50/e1/b794d7dfa8e9c207949c6cec95dcddaab0fdc6c0e8334a749eaceb4a6df8/botocore-1.36.18.tar.gz"
+        sha256 "ddadafe460e91f11677720a2fcc3ea09c4abb914de2b000da7ba46b4c97da3d7"
     end
     
     resource "certifi" do
@@ -85,8 +85,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "cryptography" do
-        url "https://files.pythonhosted.org/packages/91/4c/45dfa6829acffa344e3967d6006ee4ae8be57af746ae2eba1c431949b32c/cryptography-44.0.0.tar.gz"
-        sha256 "cd4e834f340b4293430701e772ec543b0fbe6c2dea510a5286fe0acabe153a02"
+        url "https://files.pythonhosted.org/packages/c7/67/545c79fe50f7af51dbad56d16b23fe33f63ee6a5d956b3cb68ea110cbe64/cryptography-44.0.1.tar.gz"
+        sha256 "f51f5705ab27898afda1aaa430f34ad90dc117421057782022edf0600bec5f14"
     end
     
     resource "DateTime" do
@@ -170,8 +170,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "lxml" do
-        url "https://files.pythonhosted.org/packages/e7/6b/20c3a4b24751377aaa6307eb230b66701024012c29dd374999cc92983269/lxml-5.3.0.tar.gz"
-        sha256 "4e109ca30d1edec1ac60cdbe341905dc3b8f55b16855e03a54aaf59e51ec8c6f"
+        url "https://files.pythonhosted.org/packages/ef/f6/c15ca8e5646e937c148e147244817672cf920b56ac0bf2cc1512ae674be8/lxml-5.3.1.tar.gz"
+        sha256 "106b7b5d2977b339f1e97efe2778e2ab20e99994cbb0ec5e55771ed0795920c8"
     end
     
     resource "markdown-it-py" do
