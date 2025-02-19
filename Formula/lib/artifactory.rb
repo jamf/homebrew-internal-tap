@@ -22,7 +22,7 @@ class ArtifactoryDownloadStrategy < CurlDownloadStrategy
         req = Net::HTTP::Get.new(url.to_s)
 
         # setting both OpenTimeout and ReadTimeout
-        res = Net::HTTP.start(url.host, url.port, :open_timeout => 3, :read_timeout => 3) {|http|
+        res = Net::HTTP.start(url.host, url.port, use_ssl: true, :open_timeout => 3, :read_timeout => 3) {|http|
           http.request(req)
         }
       rescue Net::OpenTimeout, Net::ReadTimeout => e
