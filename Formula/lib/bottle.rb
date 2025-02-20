@@ -22,9 +22,9 @@ class ArtifactoryBottleDownloadStrategy < CurlDownloadStrategy
         req = Net::HTTP::Get.new(url.to_s)
 
         # setting both OpenTimeout and ReadTimeout
-        res = Net::HTTP.start(url.host, url.port, :open_timeout => 3, :read_timeout => 3) {|http|
+        res = Net::HTTP.start(url.host, url.port, use_ssl: true, :open_timeout => 3, :read_timeout => 3) do |http|
           http.request(req)
-        }
+        end
       rescue Net::OpenTimeout, Net::ReadTimeout => e
         odie "Artifactory is NOT reachable"
       end
