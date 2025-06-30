@@ -11,9 +11,9 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.5.3",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.6.0",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_sonoma: "78efb4bb57acca3f82d435259a5ab99afc06bdb64ffec9769dacf66316cbba8a"
+    sha256 cellar: :any, arm64_sonoma: "870d11e449a564489003ee5ca21bb5100fb9451930266f4c5ab073e6625d379e"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -128,6 +128,11 @@ class Cloudtools < Formula
     resource "et_xmlfile" do
         url "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
         sha256 "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
+    end
+    
+    resource "humanize" do
+        url "https://files.pythonhosted.org/packages/22/d1/bbc4d251187a43f69844f7fd8941426549bbe4723e8ff0a7441796b0789f/humanize-4.12.3.tar.gz"
+        sha256 "8430be3a615106fdfceb0b2c1b41c4c98c6b0fc5cc59663a5539b111dd325fb0"
     end
     
     resource "idna" do
@@ -368,11 +373,6 @@ class Cloudtools < Formula
     resource "termcolor" do
         url "https://files.pythonhosted.org/packages/b8/85/147a0529b4e80b6b9d021ca8db3a820fcac53ec7374b87073d004aaf444c/termcolor-2.3.0.tar.gz"
         sha256 "b5b08f68937f138fe92f6c089b99f1e2da0ae56c52b78bf7075fd95420fd9a5a"
-    end
-    
-    resource "time-machine" do
-        url "https://files.pythonhosted.org/packages/fb/dd/5022939b9cadefe3af04f4012186c29b8afbe858b1ec2cfa38baeec94dab/time_machine-2.16.0.tar.gz"
-        sha256 "4a99acc273d2f98add23a89b94d4dd9e14969c01214c8514bfa78e4e9364c7e2"
     end
     
     resource "tqdm" do
