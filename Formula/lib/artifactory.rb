@@ -58,7 +58,7 @@ class DownloadFactory < CurlDownloadStrategy
     begin
       github = GitHubPrivateRepositoryReleaseDownloadStrategy.new(url, name, version, **meta)
     rescue AccessDeniedError, EnvironmentMissingError => e
-      opoo e.message
+      #opoo e.message
       artifactory = ArtifactoryDownloadStrategy.new(url, name, version, **meta)
     end
   end
