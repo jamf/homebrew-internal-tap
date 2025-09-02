@@ -22,7 +22,6 @@ class CloudtoolsAT9 < Formula
     depends_on "certifi"
     depends_on "cryptography"
     depends_on "mozjpeg"
-    depends_on "cmake"
     depends_on "libxml2"
     depends_on "libxslt"
     depends_on "freetype"
