@@ -11,9 +11,9 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.8.2",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.8.3",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_sonoma: "b4703009b73a71762a7facb0d5398f0a648e58b3e8a8c62f49f157a7fa7281b8"
+    sha256 cellar: :any, arm64_sonoma: "35133b016c1e15fdb91fe513eb3e110fe4203b70c3cffe359d260ab9f63535d6"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -405,6 +405,11 @@ class Cloudtools < Formula
     end
   
     def install
+        # Set environment variables for lxml to find libxml2 and libxslt
+        ENV.append "CFLAGS", "-I#{Formula["libxml2"].opt_include}/libxml2"
+        ENV.append "CFLAGS", "-I#{Formula["libxslt"].opt_include}"
+        ENV.append "LDFLAGS", "-L#{Formula["libxml2"].opt_lib}"
+        ENV.append "LDFLAGS", "-L#{Formula["libxslt"].opt_lib}"
         venv = virtualenv_create(libexec, python3)
         venv.pip_install resources
         venv.pip_install_and_link buildpath
