@@ -10,6 +10,14 @@ class CloudtoolsAT9 < Formula
     desc "Cloud Operations Tools Homebrew Dev"
     homepage "https://github.com/jamf/cloud-ops-tools"
 
+  bottle do
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1456",
+      using: ArtifactoryBottleDownloadStrategy
+    sha256 cellar: :any, arm64_tahoe:   "01676aeb9eeba5b6e4e4e5c77a798559ed08cccd82f22b2e353f8ab9b4f98629"
+    sha256 cellar: :any, arm64_sequoia: "09177bcaf67ea3441cba4da2f8e17a785be58306e162ea4caa1a3a1d79482bbf"
+    sha256 cellar: :any, arm64_sonoma:  "1695bae25073426abdb5a185943c2e39f9abb802874273d9ed9122a035fb1dd0"
+  end
+
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
     version release['version']
     license "MIT"
