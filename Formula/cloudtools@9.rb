@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1456",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1459",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "01676aeb9eeba5b6e4e4e5c77a798559ed08cccd82f22b2e353f8ab9b4f98629"
-    sha256 cellar: :any, arm64_sequoia: "09177bcaf67ea3441cba4da2f8e17a785be58306e162ea4caa1a3a1d79482bbf"
-    sha256 cellar: :any, arm64_sonoma:  "1695bae25073426abdb5a185943c2e39f9abb802874273d9ed9122a035fb1dd0"
+    sha256 cellar: :any, arm64_tahoe:   "4c4dbe9c19a4ac8f67480133e307bb8cd562045dd26b8cc2a5bff89ea060e1f0"
+    sha256 cellar: :any, arm64_sequoia: "74f710b05e68d26d2fc95893d241aa8d8e35e17e39740c8b54d8932b5b05c121"
+    sha256 cellar: :any, arm64_sonoma:  "6eed3f12eb57c2022ea2ac05e71b75a4b911530ebc9805582c05470fa76f38ba"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -407,6 +407,15 @@ class CloudtoolsAT9 < Formula
     end
   
     def install
+        # Set environment variables to ensure proper compilation against Homebrew libraries
+        ENV["LDFLAGS"] = "-L#{Formula["libxml2"].opt_lib} -L#{Formula["libxslt"].opt_lib}"
+        ENV["CPPFLAGS"] = "-I#{Formula["libxml2"].opt_include} -I#{Formula["libxslt"].opt_include}"
+        ENV["PKG_CONFIG_PATH"] = "#{Formula["libxml2"].opt_lib}/pkgconfig:#{Formula["libxslt"].opt_lib}/pkgconfig"
+        
+        # Set pip to not use cache and compile from source
+        ENV["PIP_NO_CACHE_DIR"] = "1"
+        ENV["PIP_NO_BINARY"] = ":all:"
+        
         venv = virtualenv_create(libexec, python3)
         venv.pip_install resources
         venv.pip_install_and_link buildpath
