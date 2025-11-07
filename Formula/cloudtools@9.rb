@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1459",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1460",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "4c4dbe9c19a4ac8f67480133e307bb8cd562045dd26b8cc2a5bff89ea060e1f0"
-    sha256 cellar: :any, arm64_sequoia: "74f710b05e68d26d2fc95893d241aa8d8e35e17e39740c8b54d8932b5b05c121"
-    sha256 cellar: :any, arm64_sonoma:  "6eed3f12eb57c2022ea2ac05e71b75a4b911530ebc9805582c05470fa76f38ba"
+    sha256 cellar: :any, arm64_tahoe:   "ce1d7f69c35d7d77cd1c531553db832b90af5679c8cc89379f6c8636c7736994"
+    sha256 cellar: :any, arm64_sequoia: "06daf0ef0f232213f8a41b3e9099e3781cfd662a1fe1831faeed80fbb34334ce"
+    sha256 cellar: :any, arm64_sonoma:  "448836dd8539b819ccad363d818327c9cb16bea3f6194e5233e76cb3f8a640c4"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -416,9 +416,20 @@ class CloudtoolsAT9 < Formula
         ENV["PIP_NO_CACHE_DIR"] = "1"
         ENV["PIP_NO_BINARY"] = ":all:"
         
+        # Enable multithreaded compilation
+        ENV["MAKEFLAGS"] = "-j#{ENV.fetch("HOMEBREW_MAKE_JOBS", Hardware::CPU.cores)}"
+        ENV["CMAKE_BUILD_PARALLEL_LEVEL"] = Hardware::CPU.cores.to_s
+        ENV["NPY_NUM_BUILD_JOBS"] = Hardware::CPU.cores.to_s
+        
         venv = virtualenv_create(libexec, python3)
         venv.pip_install resources
         venv.pip_install_and_link buildpath
+
+        # Create symlink to fix lxml libxml2 version mismatch
+        libxml2_lib_dir = Formula["libxml2"].opt_lib
+        unless File.exist?("#{libxml2_lib_dir}/libxml2.2.dylib")
+            system "ln", "-sf", "#{libxml2_lib_dir}/libxml2.16.dylib", "#{libxml2_lib_dir}/libxml2.2.dylib"
+        end
 
         #install bash script
         bin.install "src/scripts/update_jamf_os_aliases"
@@ -427,6 +438,23 @@ class CloudtoolsAT9 < Formula
         #bin.install "path/to/executable"
     end
   
+    def post_install
+        # Ensure the symlink is created after installation
+        libxml2_lib_dir = Formula["libxml2"].opt_lib
+        unless File.exist?("#{libxml2_lib_dir}/libxml2.2.dylib")
+            system "ln", "-sf", "#{libxml2_lib_dir}/libxml2.16.dylib", "#{libxml2_lib_dir}/libxml2.2.dylib"
+        end
+    end
+
+    def uninstall_postupgrade
+        # Clean up the symlink when uninstalling
+        libxml2_lib_dir = Formula["libxml2"].opt_lib
+        symlink_path = "#{libxml2_lib_dir}/libxml2.2.dylib"
+        if File.symlink?(symlink_path) && File.readlink(symlink_path).include?("libxml2.16.dylib")
+            File.unlink(symlink_path)
+        end
+    end
+
     test do
     end
   end
