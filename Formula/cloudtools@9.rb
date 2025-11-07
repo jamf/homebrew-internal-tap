@@ -3,6 +3,7 @@ require 'json'
 require 'formula'
 require_relative 'lib/private'
 require_relative 'lib/artifactory'
+require_relative 'lib/bottle'
 
 class CloudtoolsAT9 < Formula
     include Language::Python::Virtualenv
@@ -13,7 +14,11 @@ class CloudtoolsAT9 < Formula
     version release['version']
     license "MIT"
 
-    url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloudtools-#{version}.tar.gz", :using => DownloadFactory
+    if File.exist?("/tmp/cloudtools-#{version}.tar.gz")
+        url "file:///tmp/cloudtools-#{version}.tar.gz"
+    else
+        url "https://github.com/jamf/cloud-ops-tools/releases/download/#{version}/cloudtools-#{version}.tar.gz", :using => DownloadFactory
+    end
     sha256 release['sha256']
     
     depends_on "python@3.12"
@@ -397,6 +402,12 @@ class CloudtoolsAT9 < Formula
         venv = virtualenv_create(libexec, python3)
         venv.pip_install resources
         venv.pip_install_and_link buildpath
+
+        #install bash script
+        bin.install "src/scripts/update_jamf_os_aliases"
+
+        #install other executables
+        #bin.install "path/to/executable"
     end
   
     test do
