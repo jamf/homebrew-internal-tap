@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1460",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.07dev1461",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "ce1d7f69c35d7d77cd1c531553db832b90af5679c8cc89379f6c8636c7736994"
-    sha256 cellar: :any, arm64_sequoia: "06daf0ef0f232213f8a41b3e9099e3781cfd662a1fe1831faeed80fbb34334ce"
-    sha256 cellar: :any, arm64_sonoma:  "448836dd8539b819ccad363d818327c9cb16bea3f6194e5233e76cb3f8a640c4"
+    sha256 cellar: :any, arm64_tahoe:   "ba5e6f25099843094e4ccbb93038928807752ed196b07f7a2b82774872d9c83e"
+    sha256 cellar: :any, arm64_sequoia: "e92c80daac1cb41b55997b0dd604dde41e2053dfdba7fdbad1cd08edf2a4fa2d"
+    sha256 cellar: :any, arm64_sonoma:  "32316154f5a3a2da0a2a863cfcd74d18821017fdd3d674008a42ec3063227245"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -35,7 +35,6 @@ class CloudtoolsAT9 < Formula
     depends_on "certifi"
     depends_on "cryptography"
     depends_on "mozjpeg"
-    depends_on "libxml2"
     depends_on "libxslt"
     depends_on "freetype"
     depends_on "openjpeg"
@@ -425,34 +424,11 @@ class CloudtoolsAT9 < Formula
         venv.pip_install resources
         venv.pip_install_and_link buildpath
 
-        # Create symlink to fix lxml libxml2 version mismatch
-        libxml2_lib_dir = Formula["libxml2"].opt_lib
-        unless File.exist?("#{libxml2_lib_dir}/libxml2.2.dylib")
-            system "ln", "-sf", "#{libxml2_lib_dir}/libxml2.16.dylib", "#{libxml2_lib_dir}/libxml2.2.dylib"
-        end
-
         #install bash script
         bin.install "src/scripts/update_jamf_os_aliases"
 
         #install other executables
         #bin.install "path/to/executable"
-    end
-  
-    def post_install
-        # Ensure the symlink is created after installation
-        libxml2_lib_dir = Formula["libxml2"].opt_lib
-        unless File.exist?("#{libxml2_lib_dir}/libxml2.2.dylib")
-            system "ln", "-sf", "#{libxml2_lib_dir}/libxml2.16.dylib", "#{libxml2_lib_dir}/libxml2.2.dylib"
-        end
-    end
-
-    def uninstall_postupgrade
-        # Clean up the symlink when uninstalling
-        libxml2_lib_dir = Formula["libxml2"].opt_lib
-        symlink_path = "#{libxml2_lib_dir}/libxml2.2.dylib"
-        if File.symlink?(symlink_path) && File.readlink(symlink_path).include?("libxml2.16.dylib")
-            File.unlink(symlink_path)
-        end
     end
 
     test do
