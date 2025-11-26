@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.26dev1487",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.26dev1488",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "2d822c0ddf7d800b3d4448d653a75d2e57a0546a052ec0aaf3a3d80113f640ab"
-    sha256 cellar: :any, arm64_sequoia: "8653366b9ec25e78d6eee25d13b4797d7e8b0a262b2247b0431c1deaf676c678"
-    sha256 cellar: :any, arm64_sonoma:  "55556db6664deb6751bf642834b57fb05b9294fca95ab8ebd8150e94eef6aef8"
+    sha256 cellar: :any, arm64_tahoe:   "bfae496df960b57d9bffbed4cff0842755ccd5822d04524f86ddf64c70a38e7f"
+    sha256 cellar: :any, arm64_sequoia: "f76dbd354528118b4860385bcabadc2489a9518570b7d0e3aed12aee10cc2565"
+    sha256 cellar: :any, arm64_sonoma:  "7dc6eeb56c25f718db2a1b9cb05fa09eace3d45507f3157d5f718cbf90393e96"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -80,8 +80,8 @@ class CloudtoolsAT9 < Formula
     end
     
     resource "certifi" do
-        url "https://files.pythonhosted.org/packages/a2/8c/58f469717fa48465e4a50c014a0400602d3c437d7c0c468e17ada824da3a/certifi-2025.11.12.tar.gz"
-        sha256 "d8ab5478f2ecd78af242878415affce761ca6bc54a22a27e026d7c25357c3316"
+        url "https://files.pythonhosted.org/packages/4c/5b/b6ce21586237c77ce67d01dc5507039d444b630dd76611bbca2d8e5dcd91/certifi-2025.10.5.tar.gz"
+        sha256 "47c09d31ccf2acf0be3f701ea53595ee7e0b8fa08801c6624be771df09ae7b43"
     end
     
     resource "cffi" do
