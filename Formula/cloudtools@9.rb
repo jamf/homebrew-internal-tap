@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.29dev1506",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.11.29dev1507",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "c31304b87d49a11c1fbf737caa8f9d619411e0373959ba6f9a5b6e8106e9f828"
-    sha256 cellar: :any, arm64_sequoia: "cc38fc82dd0f516f45e5ed818650dc4e4f6eb73ecadcfd1c13ad4351de60a09a"
-    sha256 cellar: :any, arm64_sonoma:  "514c96827b7ea3861ee541b898f9371d17500136bd3df603861cd900f0aa937a"
+    sha256 cellar: :any, arm64_tahoe:   "0dd15724b64e51e34a60674bb26ebc4412f35c5be136782e14610eb2a3539a1b"
+    sha256 cellar: :any, arm64_sequoia: "a217a2ebf77528f5e20e7d3fe1758ba97e7e547bc165f81eefe68bd54607dee1"
+    sha256 cellar: :any, arm64_sonoma:  "ae4b056e38fb2215677943711c324f76a34985d06296191099c21d103d263e91"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
