@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.03dev1513",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.03dev1514",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "10f93206fecd90968183b9eef0f00d4749797210ddeab71d5dc1afc6c93a2c3b"
-    sha256 cellar: :any, arm64_sequoia: "a251b902f34fac6de5431a651bc442c44d4eb2a418298f925a9b085979f3cf83"
-    sha256 cellar: :any, arm64_sonoma:  "c51e514b4a106b2219c5f89286fc3b02bedbefe0e04201641fd7b2411704871e"
+    sha256 cellar: :any, arm64_tahoe:   "7d97649416327dc787127dcb4467d24b6561e5545b3af8a539d0f9402db084d8"
+    sha256 cellar: :any, arm64_sequoia: "33b4ad784ca6c8487a51467277a8b7177b57f395f573295e403699b33cd76d0d"
+    sha256 cellar: :any, arm64_sonoma:  "b0e808a47bdda279f36286fe148463aec8531dab14b9560238b7be6e8d9cc817"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -147,11 +147,6 @@ class CloudtoolsAT9 < Formula
     resource "jaraco.functools" do
         url "https://files.pythonhosted.org/packages/f7/ed/1aa2d585304ec07262e1a83a9889880701079dde796ac7b1d1826f40c63d/jaraco_functools-4.3.0.tar.gz"
         sha256 "cfd13ad0dd2c47a3600b439ef72d8615d482cedcff1632930d6f28924d92f294"
-    end
-    
-    resource "jeepney" do
-        url "https://files.pythonhosted.org/packages/7b/6f/357efd7602486741aa73ffc0617fb310a29b588ed0fd69c2399acbb85b0c/jeepney-0.9.0.tar.gz"
-        sha256 "cf0e9e845622b81e4a28df94c40345400256ec608d0e55bb8a3feaa9163f5732"
     end
     
     resource "jira" do
@@ -302,11 +297,6 @@ class CloudtoolsAT9 < Formula
     resource "s3transfer" do
         url "https://files.pythonhosted.org/packages/05/04/74127fc843314818edfa81b5540e26dd537353b123a4edc563109d8f17dd/s3transfer-0.16.0.tar.gz"
         sha256 "8e990f13268025792229cd52fa10cb7163744bf56e719e0b9cb925ab79abf920"
-    end
-    
-    resource "SecretStorage" do
-        url "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz"
-        sha256 "f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be"
     end
     
     resource "setuptools" do
