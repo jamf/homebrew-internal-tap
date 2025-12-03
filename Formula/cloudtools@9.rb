@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.03dev1516",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.03dev1518",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "e67e4f717291a560cc081794bd0bf42c85125d3aa653d22b6e8d17497e4b7844"
-    sha256 cellar: :any, arm64_sequoia: "28eddeedc58057719f0d8c71fd186b2590c52958a53187c0a3282cf6b1ea85b4"
-    sha256 cellar: :any, arm64_sonoma:  "85374d2df5c17f16217e535336a471cca546f8c7734cca8e6d34a27e090fb829"
+    sha256 cellar: :any, arm64_tahoe:   "89330da650fd9a217a03ea5a24901b9d2ec41a9982a22430f55aa7dbdebb5ea2"
+    sha256 cellar: :any, arm64_sequoia: "7898110f0ba1f29896bcfefa8179074f44532826e097a1bdde64014b268c1a47"
+    sha256 cellar: :any, arm64_sonoma:  "e06c97fd85f675d82f1252074ba1cabc3fe67e750fe40139c99831d700193d6b"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -37,6 +37,8 @@ class CloudtoolsAT9 < Formula
     depends_on "mozjpeg"
     depends_on "freetype"
     depends_on "openjpeg"
+    depends_on "libxml2"
+    depends_on "libxslt"
 
     
     resource "art" do
