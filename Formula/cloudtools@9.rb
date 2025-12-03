@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.03dev1512",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.03dev1513",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "5bea54812372c6aab360a79be04831985327643a66ada43f0fda2f92cc2a1f53"
-    sha256 cellar: :any, arm64_sequoia: "74fcd62d4bdea41da9eee233bd402664d997602f155b02730656d464f51892b1"
-    sha256 cellar: :any, arm64_sonoma:  "0f61eb05608251609048fc1bc65713851fc5dd16e109e1a12724e129ae4b3eb4"
+    sha256 cellar: :any, arm64_tahoe:   "10f93206fecd90968183b9eef0f00d4749797210ddeab71d5dc1afc6c93a2c3b"
+    sha256 cellar: :any, arm64_sequoia: "a251b902f34fac6de5431a651bc442c44d4eb2a418298f925a9b085979f3cf83"
+    sha256 cellar: :any, arm64_sonoma:  "c51e514b4a106b2219c5f89286fc3b02bedbefe0e04201641fd7b2411704871e"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -114,11 +114,6 @@ class CloudtoolsAT9 < Formula
         sha256 "72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff"
     end
     
-    resource "et_xmlfile" do
-        url "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
-        sha256 "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
-    end
-    
     resource "humanize" do
         url "https://files.pythonhosted.org/packages/b6/43/50033d25ad96a7f3845f40999b4778f753c3901a11808a584fed7c00d9f5/humanize-4.14.0.tar.gz"
         sha256 "2fa092705ea640d605c435b1ca82b2866a1b601cdf96f076d70b79a855eba90d"
@@ -152,6 +147,11 @@ class CloudtoolsAT9 < Formula
     resource "jaraco.functools" do
         url "https://files.pythonhosted.org/packages/f7/ed/1aa2d585304ec07262e1a83a9889880701079dde796ac7b1d1826f40c63d/jaraco_functools-4.3.0.tar.gz"
         sha256 "cfd13ad0dd2c47a3600b439ef72d8615d482cedcff1632930d6f28924d92f294"
+    end
+    
+    resource "jeepney" do
+        url "https://files.pythonhosted.org/packages/7b/6f/357efd7602486741aa73ffc0617fb310a29b588ed0fd69c2399acbb85b0c/jeepney-0.9.0.tar.gz"
+        sha256 "cf0e9e845622b81e4a28df94c40345400256ec608d0e55bb8a3feaa9163f5732"
     end
     
     resource "jira" do
@@ -197,11 +197,6 @@ class CloudtoolsAT9 < Formula
     resource "oauthlib" do
         url "https://files.pythonhosted.org/packages/0b/5f/19930f824ffeb0ad4372da4812c50edbd1434f678c90c2733e1188edfc63/oauthlib-3.3.1.tar.gz"
         sha256 "0f0f8aa759826a193cf66c12ea1af1637f87b9b4622d46e866952bb022e538c9"
-    end
-    
-    resource "openpyxl" do
-        url "https://files.pythonhosted.org/packages/3d/f9/88d94a75de065ea32619465d2f77b29a0469500e99012523b91cc4141cd1/openpyxl-3.1.5.tar.gz"
-        sha256 "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"
     end
     
     resource "packaging" do
@@ -307,6 +302,11 @@ class CloudtoolsAT9 < Formula
     resource "s3transfer" do
         url "https://files.pythonhosted.org/packages/05/04/74127fc843314818edfa81b5540e26dd537353b123a4edc563109d8f17dd/s3transfer-0.16.0.tar.gz"
         sha256 "8e990f13268025792229cd52fa10cb7163744bf56e719e0b9cb925ab79abf920"
+    end
+    
+    resource "SecretStorage" do
+        url "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz"
+        sha256 "f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be"
     end
     
     resource "setuptools" do
