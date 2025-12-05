@@ -11,11 +11,11 @@ class CloudtoolsAT9 < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.04dev1527",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/2025.12.05dev1528",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "5f541a813eab1a2ecdd852e0ff61a8fa07550b8ade09eadaa038a437d68010ba"
-    sha256 cellar: :any, arm64_sequoia: "27176e0eec4ac1be54acc30ce146413162c3c292b09bef679652a2743a148863"
-    sha256 cellar: :any, arm64_sonoma:  "0fee691fb025a8e8191d891f5884a7a7b01ffe8c5104df15db19452b4d352957"
+    sha256 cellar: :any, arm64_tahoe:   "ff36c56e334ee644da1963a87a2f426707cdb54f1a403ec9408aee8a734337af"
+    sha256 cellar: :any, arm64_sequoia: "3c7d5d3578d9ca03c76e6f1870d2fd608c3dbdf977f7752167ed49938671de12"
+    sha256 cellar: :any, arm64_sonoma:  "0f41e965efeea10839d249ddb003903347496c68e6be2a98d757443ead92214a"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release-dev.json', __FILE__)).read)
@@ -37,8 +37,6 @@ class CloudtoolsAT9 < Formula
     depends_on "mozjpeg"
     depends_on "freetype"
     depends_on "openjpeg"
-    depends_on "libxml2"
-    depends_on "libxslt"
 
     
     resource "art" do
@@ -49,11 +47,6 @@ class CloudtoolsAT9 < Formula
     resource "atlassian-python-api" do
         url "https://files.pythonhosted.org/packages/40/e8/f23b7273e410c6fe9f98f9db25268c6736572f22a9566d1dc9ed3614bb68/atlassian_python_api-4.0.7.tar.gz"
         sha256 "8d9cc6068b1d2a48eb434e22e57f6bbd918a47fac9e46b95b7a3cefb00fceacb"
-    end
-    
-    resource "attrs" do
-        url "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz"
-        sha256 "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
     end
     
     resource "awxkit" do
@@ -131,11 +124,6 @@ class CloudtoolsAT9 < Formula
         sha256 "89d2ada0111f337483cb41ae31073108b2ec1e618a49d7110b0d7ade89fc197e"
     end
     
-    resource "isodate" do
-        url "https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce1202635910747e5a87cc3a6a6bb2d00973375014749/isodate-0.7.2.tar.gz"
-        sha256 "4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6"
-    end
-    
     resource "jaraco.classes" do
         url "https://files.pythonhosted.org/packages/06/c0/ed4a27bc5571b99e3cff68f8a9fa5b56ff7df1c2251cc715a652ddd26402/jaraco.classes-3.4.0.tar.gz"
         sha256 "47a024b51d0239c0dd8c8540c6c7f484be3b8fcf0b2d85c13825780d3b3f3acd"
@@ -164,11 +152,6 @@ class CloudtoolsAT9 < Formula
     resource "keyring" do
         url "https://files.pythonhosted.org/packages/43/4b/674af6ef2f97d56f0ab5153bf0bfa28ccb6c3ed4d1babf4305449668807b/keyring-25.7.0.tar.gz"
         sha256 "fe01bd85eb3f8fb3dd0405defdeac9a5b4f6f0439edbb3149577f244a2e8245b"
-    end
-    
-    resource "lxml" do
-        url "https://files.pythonhosted.org/packages/aa/88/262177de60548e5a2bfc46ad28232c9e9cbde697bd94132aeb80364675cb/lxml-6.0.2.tar.gz"
-        sha256 "cd79f3367bd74b317dda655dc8fcfa304d9eb6e4fb06b7168c5cf27f96e0cd62"
     end
     
     resource "markdown-it-py" do
@@ -211,11 +194,6 @@ class CloudtoolsAT9 < Formula
         sha256 "717ea765dd10b63618e7298b2d98efd819e0b30cd5905c9707223dceeb94b3f1"
     end
     
-    resource "platformdirs" do
-        url "https://files.pythonhosted.org/packages/61/33/9611380c2bdb1225fdef633e2a9610622310fed35ab11dac9620972ee088/platformdirs-4.5.0.tar.gz"
-        sha256 "70ddccdd7c99fc5942e9fc25636a8b34d04c24b335100223152c2803e4063312"
-    end
-    
     resource "ply" do
         url "https://files.pythonhosted.org/packages/e5/69/882ee5c9d017149285cab114ebeab373308ef0f874fcdac9beb90e0ac4da/ply-3.11.tar.gz"
         sha256 "00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3"
@@ -256,11 +234,6 @@ class CloudtoolsAT9 < Formula
         sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
     end
     
-    resource "pytz" do
-        url "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz"
-        sha256 "360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3"
-    end
-    
     resource "PyYAML" do
         url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
         sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
@@ -274,11 +247,6 @@ class CloudtoolsAT9 < Formula
     resource "requests-aws-sign" do
         url "https://files.pythonhosted.org/packages/e8/14/27d8eed7ef7870525ed9888eaa273d6c564562367a1678a85496d6b4ccf2/requests_aws_sign-0.1.6.tar.gz"
         sha256 "17b2d21f7677df638cbe22d531bda59f7dbe36493f0fe0b8f5c19b36780b8111"
-    end
-    
-    resource "requests-file" do
-        url "https://files.pythonhosted.org/packages/3c/f8/5dc70102e4d337063452c82e1f0d95e39abfe67aa222ed8a5ddeb9df8de8/requests_file-3.0.1.tar.gz"
-        sha256 "f14243d7796c588f3521bd423c5dea2ee4cc730e54a3cac9574d78aca1272576"
     end
     
     resource "requests-oauthlib" do
@@ -304,11 +272,6 @@ class CloudtoolsAT9 < Formula
     resource "setuptools" do
         url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
         sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
-    end
-    
-    resource "simple-salesforce" do
-        url "https://files.pythonhosted.org/packages/65/3f/45d257baacb8ab9e31906d5252541c151e062cedbf2152df7cef5960342d/simple_salesforce-1.12.9.tar.gz"
-        sha256 "86d63c43cf6581847284f2538fd8b17aaea0727c63a947267759f7f242a4ef8e"
     end
     
     resource "six" do
@@ -384,11 +347,6 @@ class CloudtoolsAT9 < Formula
     resource "yaspin" do
         url "https://files.pythonhosted.org/packages/f9/cd/3d2877a5558fdad6de4166fa0160dc49cb1382820cd955753c67b56facd2/yaspin-3.3.0.tar.gz"
         sha256 "505c9a44c6e3723a1bee8f7a17a055b17475176b74dd93e468fa8db48c172a41"
-    end
-    
-    resource "zeep" do
-        url "https://files.pythonhosted.org/packages/e8/06/4f1d3ff61e930163565fb73616c6251e412a4d2fc7ed18214e1c2107258d/zeep-4.3.2.tar.gz"
-        sha256 "1a23a667ce9d73a0dbfdf15745bfa2b7ab0b6402135c0cd5067574838398e0e6"
     end
     
 
