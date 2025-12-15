@@ -11,11 +11,11 @@ class Cloudtools < Formula
     homepage "https://github.com/jamf/cloud-ops-tools"
 
   bottle do
-    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.8.8",
+    root_url "https://artifactory.jamf.build/artifactory/binaries/cloud-ops-tools/v0.9.0",
       using: ArtifactoryBottleDownloadStrategy
-    sha256 cellar: :any, arm64_tahoe:   "a320a2fd395422ae2589111d39008ebc98c977775bf1c0015b00f61157a7ab41"
-    sha256 cellar: :any, arm64_sequoia: "f084df96ca7051d400f9140058474e964c7c8482d4eef1c9e89d7120b06ee069"
-    sha256 cellar: :any, arm64_sonoma:  "03321bf882fc305575d674fd1564baf48592c0188dd91c77bdf4126d90b0c47f"
+    sha256 cellar: :any, arm64_tahoe:   "cd9d343ad5ae13cf2ad6de9b45c15cc0a2859a606a3329e9e496578d0e08c8c7"
+    sha256 cellar: :any, arm64_sequoia: "dd68f41e43765e0324992dde299d48156121018642a08be2a4bcec63b164f87e"
+    sha256 cellar: :any, arm64_sonoma:  "7e6d8629bbb3e12a64863b98d1597a6c636cf8a1ae34f93a9145ed623e6d53c7"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../cloud/release.json', __FILE__)).read)
@@ -49,19 +49,14 @@ class Cloudtools < Formula
         sha256 "8d9cc6068b1d2a48eb434e22e57f6bbd918a47fac9e46b95b7a3cefb00fceacb"
     end
     
-    resource "attrs" do
-        url "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz"
-        sha256 "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
-    end
-    
     resource "awxkit" do
         url "https://files.pythonhosted.org/packages/77/c6/81c16afefcb662e3d6aae070298d603a7783cb9744892e21ba4669123b37/awxkit-24.6.1.tar.gz"
         sha256 "015421c2c525c5c5dd13890624f453ac3fc7ca2bc3e301b82db871bc4b8da23c"
     end
     
     resource "beautifulsoup4" do
-        url "https://files.pythonhosted.org/packages/77/e9/df2358efd7659577435e2177bfa69cba6c33216681af51a707193dec162a/beautifulsoup4-4.14.2.tar.gz"
-        sha256 "2a98ab9f944a11acee9cc848508ec28d9228abfd522ef0fad6a02a72e0ded69e"
+        url "https://files.pythonhosted.org/packages/c3/b0/1c6a16426d389813b48d95e26898aff79abbde42ad353958ad95cc8c9b21/beautifulsoup4-4.14.3.tar.gz"
+        sha256 "6292b1c5186d356bba669ef9f7f051757099565ad9ada5dd630bd9de5fa7fb86"
     end
     
     resource "biplist" do
@@ -70,18 +65,18 @@ class Cloudtools < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/df/3e/6c8ab966798f4e07651009ad08efc3ed4ffccf2662318790574695c740f7/boto3-1.40.68.tar.gz"
-        sha256 "c7994989e5bbba071b7c742adfba35773cf03e87f5d3f9f2b0a18c1664417b61"
+        url "https://files.pythonhosted.org/packages/28/b2/08e0d2e0ee0a189762e9c803a7980c835d94a8c395660cc115a4a6833f49/boto3-1.42.1.tar.gz"
+        sha256 "137fbea593a30afa1b75656ea1f1ff8796be608a8c77f1b606c4473289679898"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/eb/df/b0300da4cc1fe3e37c8d7a44d835518004454c7d21b579fce9ef2cd691ce/botocore-1.40.68.tar.gz"
-        sha256 "28f41b463d9f012a711ee8b61d4e26cd14ee3b450b816d5dee849aa79155e856"
+        url "https://files.pythonhosted.org/packages/8c/b5/3ce4e1eaf86953625b98fdcf40afc40a5682a76e140baf976d5e2dc6a9cc/botocore-1.42.1.tar.gz"
+        sha256 "3337df815c69dd87c314ee29329b8ea411ad3562fb6563d139bbe085dac14ce0"
     end
     
     resource "certifi" do
-        url "https://files.pythonhosted.org/packages/4c/5b/b6ce21586237c77ce67d01dc5507039d444b630dd76611bbca2d8e5dcd91/certifi-2025.10.5.tar.gz"
-        sha256 "47c09d31ccf2acf0be3f701ea53595ee7e0b8fa08801c6624be771df09ae7b43"
+        url "https://files.pythonhosted.org/packages/a2/8c/58f469717fa48465e4a50c014a0400602d3c437d7c0c468e17ada824da3a/certifi-2025.11.12.tar.gz"
+        sha256 "d8ab5478f2ecd78af242878415affce761ca6bc54a22a27e026d7c25357c3316"
     end
     
     resource "cffi" do
@@ -114,11 +109,6 @@ class Cloudtools < Formula
         sha256 "72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff"
     end
     
-    resource "et_xmlfile" do
-        url "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
-        sha256 "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
-    end
-    
     resource "humanize" do
         url "https://files.pythonhosted.org/packages/b6/43/50033d25ad96a7f3845f40999b4778f753c3901a11808a584fed7c00d9f5/humanize-4.14.0.tar.gz"
         sha256 "2fa092705ea640d605c435b1ca82b2866a1b601cdf96f076d70b79a855eba90d"
@@ -132,11 +122,6 @@ class Cloudtools < Formula
     resource "inquirerpy" do
         url "https://files.pythonhosted.org/packages/64/73/7570847b9da026e07053da3bbe2ac7ea6cde6bb2cbd3c7a5a950fa0ae40b/InquirerPy-0.3.4.tar.gz"
         sha256 "89d2ada0111f337483cb41ae31073108b2ec1e618a49d7110b0d7ade89fc197e"
-    end
-    
-    resource "isodate" do
-        url "https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce1202635910747e5a87cc3a6a6bb2d00973375014749/isodate-0.7.2.tar.gz"
-        sha256 "4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6"
     end
     
     resource "jaraco.classes" do
@@ -165,13 +150,8 @@ class Cloudtools < Formula
     end
     
     resource "keyring" do
-        url "https://files.pythonhosted.org/packages/70/09/d904a6e96f76ff214be59e7aa6ef7190008f52a0ab6689760a98de0bf37d/keyring-25.6.0.tar.gz"
-        sha256 "0b39998aa941431eb3d9b0d4b2460bc773b9df6fed7621c2dfb291a7e0187a66"
-    end
-    
-    resource "lxml" do
-        url "https://files.pythonhosted.org/packages/aa/88/262177de60548e5a2bfc46ad28232c9e9cbde697bd94132aeb80364675cb/lxml-6.0.2.tar.gz"
-        sha256 "cd79f3367bd74b317dda655dc8fcfa304d9eb6e4fb06b7168c5cf27f96e0cd62"
+        url "https://files.pythonhosted.org/packages/43/4b/674af6ef2f97d56f0ab5153bf0bfa28ccb6c3ed4d1babf4305449668807b/keyring-25.7.0.tar.gz"
+        sha256 "fe01bd85eb3f8fb3dd0405defdeac9a5b4f6f0439edbb3149577f244a2e8245b"
     end
     
     resource "markdown-it-py" do
@@ -199,11 +179,6 @@ class Cloudtools < Formula
         sha256 "0f0f8aa759826a193cf66c12ea1af1637f87b9b4622d46e866952bb022e538c9"
     end
     
-    resource "openpyxl" do
-        url "https://files.pythonhosted.org/packages/3d/f9/88d94a75de065ea32619465d2f77b29a0469500e99012523b91cc4141cd1/openpyxl-3.1.5.tar.gz"
-        sha256 "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"
-    end
-    
     resource "packaging" do
         url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
         sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
@@ -217,11 +192,6 @@ class Cloudtools < Formula
     resource "pfzy" do
         url "https://files.pythonhosted.org/packages/d9/5a/32b50c077c86bfccc7bed4881c5a2b823518f5450a30e639db5d3711952e/pfzy-0.3.4.tar.gz"
         sha256 "717ea765dd10b63618e7298b2d98efd819e0b30cd5905c9707223dceeb94b3f1"
-    end
-    
-    resource "platformdirs" do
-        url "https://files.pythonhosted.org/packages/61/33/9611380c2bdb1225fdef633e2a9610622310fed35ab11dac9620972ee088/platformdirs-4.5.0.tar.gz"
-        sha256 "70ddccdd7c99fc5942e9fc25636a8b34d04c24b335100223152c2803e4063312"
     end
     
     resource "ply" do
@@ -264,11 +234,6 @@ class Cloudtools < Formula
         sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
     end
     
-    resource "pytz" do
-        url "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz"
-        sha256 "360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3"
-    end
-    
     resource "PyYAML" do
         url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
         sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
@@ -282,11 +247,6 @@ class Cloudtools < Formula
     resource "requests-aws-sign" do
         url "https://files.pythonhosted.org/packages/e8/14/27d8eed7ef7870525ed9888eaa273d6c564562367a1678a85496d6b4ccf2/requests_aws_sign-0.1.6.tar.gz"
         sha256 "17b2d21f7677df638cbe22d531bda59f7dbe36493f0fe0b8f5c19b36780b8111"
-    end
-    
-    resource "requests-file" do
-        url "https://files.pythonhosted.org/packages/3c/f8/5dc70102e4d337063452c82e1f0d95e39abfe67aa222ed8a5ddeb9df8de8/requests_file-3.0.1.tar.gz"
-        sha256 "f14243d7796c588f3521bd423c5dea2ee4cc730e54a3cac9574d78aca1272576"
     end
     
     resource "requests-oauthlib" do
@@ -305,18 +265,13 @@ class Cloudtools < Formula
     end
     
     resource "s3transfer" do
-        url "https://files.pythonhosted.org/packages/62/74/8d69dcb7a9efe8baa2046891735e5dfe433ad558ae23d9e3c14c633d1d58/s3transfer-0.14.0.tar.gz"
-        sha256 "eff12264e7c8b4985074ccce27a3b38a485bb7f7422cc8046fee9be4983e4125"
+        url "https://files.pythonhosted.org/packages/05/04/74127fc843314818edfa81b5540e26dd537353b123a4edc563109d8f17dd/s3transfer-0.16.0.tar.gz"
+        sha256 "8e990f13268025792229cd52fa10cb7163744bf56e719e0b9cb925ab79abf920"
     end
     
     resource "setuptools" do
         url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
         sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
-    end
-    
-    resource "simple-salesforce" do
-        url "https://files.pythonhosted.org/packages/65/3f/45d257baacb8ab9e31906d5252541c151e062cedbf2152df7cef5960342d/simple_salesforce-1.12.9.tar.gz"
-        sha256 "86d63c43cf6581847284f2538fd8b17aaea0727c63a947267759f7f242a4ef8e"
     end
     
     resource "six" do
@@ -325,8 +280,8 @@ class Cloudtools < Formula
     end
     
     resource "slack_sdk" do
-        url "https://files.pythonhosted.org/packages/8e/c2/0a174a155623d7dc3ed4d1360cdf755590acdc2c3fc9ce0d2340f468909f/slack_sdk-3.37.0.tar.gz"
-        sha256 "242d6cffbd9e843af807487ff04853189b812081aeaa22f90a8f159f20220ed9"
+        url "https://files.pythonhosted.org/packages/b6/dd/645f3eb93fce38eadbb649e85684730b1fc3906c2674ca59bddc2ca2bd2e/slack_sdk-3.39.0.tar.gz"
+        sha256 "6a56be10dc155c436ff658c6b776e1c082e29eae6a771fccf8b0a235822bbcb1"
     end
     
     resource "soupsieve" do
@@ -340,8 +295,8 @@ class Cloudtools < Formula
     end
     
     resource "sqlparse" do
-        url "https://files.pythonhosted.org/packages/e5/40/edede8dd6977b0d3da179a342c198ed100dd2aba4be081861ee5911e4da4/sqlparse-0.5.3.tar.gz"
-        sha256 "09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272"
+        url "https://files.pythonhosted.org/packages/18/67/701f86b28d63b2086de47c942eccf8ca2208b3be69715a1119a4e384415a/sqlparse-0.5.4.tar.gz"
+        sha256 "4396a7d3cf1cd679c1be976cf3dc6e0a51d0111e87787e7a8d780e7d5a998f9e"
     end
     
     resource "stone" do
@@ -392,11 +347,6 @@ class Cloudtools < Formula
     resource "yaspin" do
         url "https://files.pythonhosted.org/packages/f9/cd/3d2877a5558fdad6de4166fa0160dc49cb1382820cd955753c67b56facd2/yaspin-3.3.0.tar.gz"
         sha256 "505c9a44c6e3723a1bee8f7a17a055b17475176b74dd93e468fa8db48c172a41"
-    end
-    
-    resource "zeep" do
-        url "https://files.pythonhosted.org/packages/e8/06/4f1d3ff61e930163565fb73616c6251e412a4d2fc7ed18214e1c2107258d/zeep-4.3.2.tar.gz"
-        sha256 "1a23a667ce9d73a0dbfdf15745bfa2b7ab0b6402135c0cd5067574838398e0e6"
     end
     
 
